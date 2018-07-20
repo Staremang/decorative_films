@@ -3075,6 +3075,50 @@ audio {
   width: 100%;
   height: 100%;
   z-index: 100;
+  display: none;
+  background: rgba(30, 30, 30, 0.83);
+}
+.popup.active {
+  display: block;
+}
+.popup__btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  z-index: 10;
+  cursor: pointer;
+}
+.popup__btn:after {
+  content: '×';
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 30px;
+  height: 30px;
+  font: 22px/30px Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color: #888;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 50%;
+  border-width: 0;
+  background-color: transparent;
+  -webkit-transition: background-color 0.25s;
+  -o-transition: background-color 0.25s;
+  transition: background-color 0.25s;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.popup__btn:hover:after {
+  color: #555;
+  background: #eee;
 }
 .popup__wrapper {
   background: white;
@@ -3083,6 +3127,9 @@ audio {
   top: 30px;
   right: 30px;
   bottom: 30px;
+  margin: 0;
+  font-family: 'a_FuturaOrto', sans-sarif;
+  overflow: auto;
 }
 .popup__container {
   display: -webkit-box;
@@ -3094,12 +3141,7 @@ audio {
   max-width: 1490px;
   margin-left: auto;
   margin-right: auto;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 30px 0;
 }
 .films-menu {
   -webkit-box-flex: 0;
@@ -3107,11 +3149,9 @@ audio {
   flex: 0 0 330px;
   list-style: none;
   padding-left: 0;
-  overflow: auto;
   margin-top: 0;
   margin-bottom: 0;
   margin-right: 20px;
-  padding: 30px 0;
 }
 .films-menu a {
   text-decoration: none;
@@ -3159,9 +3199,7 @@ audio {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow: auto;
   padding-right: 45px;
-  padding: 30px 0;
 }
 .films-preview__colors-list {
   display: -webkit-box;
@@ -3191,11 +3229,9 @@ audio {
   opacity: 0;
 }
 .films-description {
-  overflow: auto;
   max-width: 480px;
   min-width: 320px;
   font-size: 20px;
-  padding: 30px 0;
 }
 .films-description__title {
   font-weight: bold;
@@ -3249,6 +3285,10 @@ audio {
   padding: 7px 15px;
   font-size: 18px;
   font-family: inherit;
+  outline: none;
+}
+.input:focus {
+  border-color: #ffed00;
 }
 .form-popup {
   min-width: 400px;

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.min.css">
 	
 </head> 
-<body>
+<body class="">
 	<header class="header">
 		<div class="container">
 			<div class="header__container">
@@ -41,7 +41,7 @@
 					<li class="section__list-item" data-bg="img/section-1-bg-3.png">Декоративная непроницаемость</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" class="section__more-btn">Подробнее...</button>
+					<button type="button" data-popup data-src="#description" class="section__more-btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -56,7 +56,7 @@
 					<li class="section__list-item" data-bg="img/section-1-bg-3.png">Частичная прозрачность/скрытость</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" class="section__more-btn">Подробнее...</button>
+					<button type="button" data-popup data-src="#description" class="section__more-btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@
 					<li class="section__list-item" data-bg="img/section-1-bg-3.png">Crystall - с ярко-выраженными блестками</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" class="section__more-btn">Подробнее...</button>
+					<button type="button" data-popup data-src="#description" class="section__more-btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -86,7 +86,7 @@
 					<li class="section__list-item" data-bg="img/section-1-bg-3.png">Нанесение за счет статики</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" class="section__more-btn">Подробнее...</button>
+					<button type="button" data-popup data-src="#description" class="section__more-btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -101,7 +101,7 @@
 					<li class="section__list-item" data-bg="img/section-1-bg-3.png">Высокая устойчивость к внешним воздействиям</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" class="section__more-btn">Подробнее...</button>
+					<button type="button" data-popup data-src="#description" class="section__more-btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -116,7 +116,7 @@
 					<li class="section__list-item" data-bg="img/section-1-bg-3.png">Плоттерная резка и интерьерная печать</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" class="section__more-btn">Подробнее...</button>
+					<button type="button" data-popup data-src="#description" class="section__more-btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -137,57 +137,11 @@
 	</footer>
 -->
 	<div class="popup">
-		<div class="popup__wrapper">
+		<button data-popup-close class="popup__btn"></button>
+		<div class="popup__wrapper" id="">
 			<div class="popup__container">
-				<ul class="films-menu">
-					<li class="films-menu__title">
-						Brilliant Cut
-					</li>
-					<li class="films-menu__title active">
-						Diamond Grit
-						<ul class="films-menu__subtitle-block">
-							<li class="films-menu__subtitle"><a href="#">D000  Colorless </a></li>
-							<li class="films-menu__subtitle"><a href="#">D001  Cherry red</a></li>
-							<li class="films-menu__subtitle"><a href="#">D002  Azure sea</a></li>
-							<li class="films-menu__subtitle"><a href="#">D003  Light green</a></li>
-							<li class="films-menu__subtitle"><a href="#">D004  Lilac tint</a></li>
-							<li class="films-menu__subtitle"><a href="#">D005  Poison rose</a></li>
-							<li class="films-menu__subtitle"><a href="#">D006  Smoky black</a></li>
-							<li class="films-menu__subtitle"><a href="#">D007  Golden orange</a></li>
-							<li class="films-menu__subtitle"><a href="#">D008  Blue sky</a></li>
-							<li class="films-menu__subtitle active"><a href="#">D009  Black</a></li>
-							<li class="films-menu__subtitle"><a href="#">D010  Caustic yellow </a></li>
-							<li class="films-menu__subtitle"><a href="#">D011  Light lemo</a></li>
-						</ul>
-					</li>
-					<li class="films-menu__title">
-						Crystall & Sandblast
-					</li>
-					<li class="films-menu__title">
-						WoodGrain
-					</li>
-					<li>
-						<button type="button" data-fancybox data-src="#" class="btn films-menu__btn">Варианты оплаты</button>
-					</li>
-					<li>
-						<button type="button" data-fancybox data-src="#shiping" class="btn films-menu__btn">Доставка заказа</button>
-					</li>
-				</ul>
-				<div class="films-preview">
-					<div class="films-preview__full">
-						<img src="img/d009-full.png" alt="">
-					</div>
-					<nav class="films-preview__colors-list">
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-						<a href="#" class="films-preview__color" style="background-image: url(img/D000.jpg)"></a>
-					</nav>
-				</div>
+				<ul class="films-menu"></ul>
+				<div class="films-preview"></div>
 				<div class="films-description">
 					<h2 class="films-description__title">Brilliant Cut</h2>
 					<h3 class="films-description__subtitle">D009  Black</h3>
@@ -210,6 +164,8 @@
 			</div>
 		</div>
 	</div>
+	
+	
 	<form class="form-popup" id="order">
 		<div class="form-popup__title">Оформление заказа</div>
 		<label class="form-popup__label">
@@ -231,11 +187,52 @@
 		<button type="submit" class="form-popup__btn btn">Оформить заказ</button>
 	</form>
 	
+	<div id="payment">
+		Оплата заказа
+	</div>
+	<div id="shiping">
+		Доставка заказа
+	</div>
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 <!--	<script src="js/owl.carousel.min.js"></script>-->
 	<script src="js/jquery.fancybox.min.js"></script>
-	
+	<script>
+	var type = [
+			{
+				"name": 'Brilliant Cut',
+				"sub": [],
+			},
+			{
+				"name": 'Diamond Grit',
+				id: "D",
+				"sub": [
+					{"id": "D000", fullUrl: 'img/D000-full.jpg', prevUrl: 'img/D000.jpg', "name": 'D000 Colorless'},
+					{"id": "D001", fullUrl: 'img/D001-full.jpg', prevUrl: 'img/D001.jpg', "name": 'D001 Cherry red'},
+					{"id": "D002", fullUrl: 'img/D002-full.jpg', prevUrl: 'img/D002.jpg', "name": 'D002 Azure sea'},
+					{"id": "D003", fullUrl: 'img/D003-full.jpg', prevUrl: 'img/D003.jpg', "name": 'D003 Light green'},
+					{"id": "D004", fullUrl: 'img/D004-full.jpg', prevUrl: 'img/D004.jpg', "name": 'D004 Lilac tint'},
+					{"id": "D005", fullUrl: 'img/D005-full.jpg', prevUrl: 'img/D005.jpg', "name": 'D005 Poison rose'},
+					{"id": "D006", fullUrl: 'img/D006-full.jpg', prevUrl: 'img/D006.jpg', "name": 'D006 Smoky black'},
+					{"id": "D007", fullUrl: 'img/D007-full.jpg', prevUrl: 'img/D007.jpg', "name": 'D007 Golden orange'},
+					{"id": "D008", fullUrl: 'img/D008-full.jpg', prevUrl: 'img/D008.jpg', "name": 'D008 Blue sky'},
+					{"id": "D009", fullUrl: 'img/D009-full.jpg', prevUrl: 'img/D009.jpg', "name": 'D009 Black'},
+					{"id": "D010", fullUrl: 'img/D010-full.jpg', prevUrl: 'img/D010.jpg', "name": 'D010 Caustic yellow'},
+					{"id": "D011", fullUrl: 'img/D011-full.jpg', prevUrl: 'img/D011.jpg', "name": 'D011 Light lemo'},
+				]
+			},
+			{
+				"name": 'Crystall & Sandblast',
+				"sub": [],
+			},
+			{
+				"name": 'WoodGrain',
+				"sub": [],
+			},
+			
+		]
+	</script>
 	<script src="js/main.min.js"></script>
 </body>
 </html>

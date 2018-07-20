@@ -110,10 +110,68 @@
 
 })(jQuery);
 
+function showPopup (id) {
+	
+	console.log(id);
+	
+	var popup = $('.popup');
+	popup.fadeIn();
+	$('body').addClass('fancybox-active');
+	
+	var s = '',
+		prev = '<div class="films-preview__full">\
+					<img src="img/d009-full.png" alt="">\
+				</div>\
+				<nav class="films-preview__colors-list">';
+	
+	type.forEach(function(item, i) {
+		s += '<li class="films-menu__title" data-popup data-src="">\n';
+		s += item.name;
+		s += '<ul class="films-menu__subtitle-block">'
+		
+		item.sub.forEach(function(item, i) {
+			s += '<li class="films-menu__subtitle' + (id == item.id ? ' active' : '') + '" data-popup data-src="' + item.id + '">' + item.name + '</li>';
+			prev += '<div class="films-preview__color' + (id == item.id ? ' active' : '') + '" data-popup data-src="' + item.id + '" style="background-image: url(' + item.prevUrl + ')"></div>';
+
+		})
+		
+		s += '</ul>';
+		s += '</li>';
+		
+		
+	});
+	prev += '</nav></div>';
+	s += '<li>\
+			<button type="button" data-fancybox data-src="#payment" class="btn films-menu__btn">Варианты оплаты</button>\
+		</li>\
+		<li>\
+			<button type="button" data-fancybox data-src="#shiping" class="btn films-menu__btn">Доставка заказа</button>\
+		</li>';
+	
+	popup.find('.films-menu').html(s);
+	popup.find('.films-preview').html(prev);
+	
+	
+	$('[data-popup]').click(function () {
+		showPopup($(this).attr('data-src'));
+	});
+}
+
 $(document).ready(function () {
 	$('.section__list-item').click(function () {
 		var section = $(this).parents('.section');
 		section.children('.section__bg').remove();
 		section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
+	})
+	
+	
+	$('[data-popup-close]').click(function () {
+		$('.popup').fadeOut();
+		$('body').toggleClass('fancybox-active');
+	})
+	
+	
+	$('[data-popup]').click(function () {
+		showPopup($(this).attr('data-src'));
 	})
 })
