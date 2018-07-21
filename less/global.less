@@ -98,21 +98,29 @@ audio {
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		height: 114px;
-		border-bottom: 4px solid #1f1c1f;
-		padding-top: 20px;
-	}
-	&__nav {
-		
+		height: 80px;
+		border-bottom: 3px solid #1f1c1f;
 	}
 	&__link {
 		font-weight: bold;
-		font-size: 33px;
+		font-size: 23px;
 		color: black;
 		text-decoration: none;
 		margin-left: 50px;
 		&:hover {
 			text-decoration: underline;
+		}
+	}
+	
+	@media (min-width: @width-xxl) {
+		
+		&__container {
+			height: 114px;
+			padding-top: 20px;
+			border-bottom-width: 4px;
+		}
+		&__link {
+			font-size: 33px;
 		}
 	}
 }
@@ -167,10 +175,10 @@ audio {
 		background-image: url(../img/section-3-bg.jpg);
 	}
 	&#section-4 {
-		background-image: url(../img/section-4-bg.jpg);
+		background-image: url(../img/section-5-bg.jpg);
 	}
 	&#section-5 {
-		background-image: url(../img/section-5-bg.jpg);
+		background-image: url(../img/section-4-bg.jpg);
 	}
 	&#section-6 {
 		background-image: url(../img/section-6-bg.jpg); 
@@ -192,24 +200,38 @@ audio {
 		flex-direction: column;
 		height: 100%;
 		justify-content: flex-end;
+		
+		&_vertical-center {
+			justify-content: center;
+		}
 	}
 	&__hero-title {
 		font-weight: bold;
-		font-size: 82px;
+		font-size: 62px;
 		text-shadow: 7px 6px 0 rgba(0, 0, 0, 0.75);
 		padding-right: 70px;
-		margin-bottom: 300px;
+//		margin-bottom: 300px;
 		color: white;
-		max-width: 970px;
+		max-width: 800px;
+		
+		@media (min-width: @width-xxl) {
+			font-size: 82px;
+			max-width: 970px;
+		}
 	}
 	&__title {
 		font-weight: bold;
-		font-size: 74px;
+		font-size: 64px;
 		text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
 		padding-right: 70px;
 		margin: 0;
 		&_white {
 			color: white;
+		}
+		
+		
+		@media (min-width: @width-xxl) {
+			font-size: 74px;
 		}
 	}
 	&__list {
@@ -224,11 +246,16 @@ audio {
 		&:after {
 			content: '';
 			position: absolute;
-			height: 4px;
+			height: 3px;
+			top: -3px;
 			left: 0;
-			top: -4px;
 			width: 100%;
 			background: linear-gradient(to right, #999, #dfdbdb);
+		
+			@media (min-width: @width-xxl) {
+				height: 4px;
+				top: -4px;
+			}
 		}
 		
 		&_bg {
@@ -238,11 +265,9 @@ audio {
 	}
 	&__list-item {
 //		border-bottom: 4px solid #949495;
-		padding: 23px 27px 24px 70px;
-		min-width: 750px;
-		
-//		font-weight: bold;
-		font-size: 27px;
+		padding: 20px 27px 21px 70px;
+		min-width: 700px;
+		font-size: 23px;
 		position: relative;
 		cursor: pointer;
 		&:hover {
@@ -261,11 +286,22 @@ audio {
 		&:after {
 			content: '';
 			position: absolute;
-			height: 4px;
+			height: 3px;
 			left: 0;
 			bottom: 0;
 			width: 100%;
 			background: linear-gradient(to right, #999, #dfdbdb);
+		}
+		
+		@media (min-width: @width-xxl) {
+			
+			font-size: 27px;
+			padding: 23px 27px 24px 70px;
+			min-width: 750px;
+			
+			&:after {
+				height: 4px;
+			}
 		}
 	}
 	&__more {
@@ -279,7 +315,11 @@ audio {
 		width: 238px;
 		font-weight: bold;
 		padding: 15px;
+		color: inherit;
+		margin-left: 20px;
 	}
+	
+	
 }
 
 
@@ -379,36 +419,52 @@ audio {
 		text-decoration: none;
 		color: inherit;
 	}
+	&__title-link {
+		cursor: pointer;
+	}
 	&__title {
 		font-weight: bold;
 		font-size: 48px;
 		color: #6b7377;
 		line-height: 44px;
-		margin-top: 45px;
+		margin-bottom: 45px;
 		&.active {
 			color: #373d3e;
+			.films-menu__subtitle-block {
+				display: block;
+			}
 		}
 	}
 	&__subtitle-block {
 		list-style: none;
 		padding-left: 24px;
 		margin-top: 20px;
+		display: none;
 	}
 	&__subtitle {
 		font-size: 21px;
 		line-height: normal;
 		font-weight: 400;
 		position: relative;
+		cursor: pointer;
+		&:hover {
+			text-decoration: underline;
+		}
 		&.active {
 			
 			font-weight: bold;
+//			color: black;
 			&:before {
 				content: '';
 				position: absolute;
 				width: 26px;
 				height: 26px;
-				background: #03c853;
-				left: -30px;
+//				background: #03c853;
+				left: -36px;
+				top: -2px;
+				border: 13px solid transparent;
+				border-top-color: #03c853;
+				border-right-color: #03c853;
 			}
 		}
 	}
@@ -424,8 +480,13 @@ audio {
 //	overflow: auto;
 	padding-right: 45px;
 //	padding: 30px 0;
+	&__full {
+		width: 304px;
+	}
+	&__colors-container {
+		
+	}
 	&__colors-list {
-		display: flex;
 		flex-wrap: wrap;
 		align-content: flex-start;
 		list-style: none;
@@ -433,6 +494,11 @@ audio {
 		margin-top: 0;
 		margin-bottom: 0;
 		padding-left: 0;
+		
+		display: none;
+		&.active {
+			display: flex;
+		}
 	}
 	&__color {
 		width: 123px;
@@ -440,7 +506,8 @@ audio {
 		background-size: contain;
 		background-repeat: no-repeat;
 		border: 2px dashed transparent;
-		&:hover {
+		cursor: pointer;
+		&:hover, &.active {
 			border-color: #71c75c;
 			img {
 				opacity: 0;

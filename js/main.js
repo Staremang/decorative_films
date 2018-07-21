@@ -110,51 +110,93 @@
 
 })(jQuery);
 
-function showPopup (id) {
-	
-	console.log(id);
-	
-	var popup = $('.popup');
-	popup.fadeIn();
-	$('body').addClass('fancybox-active');
-	
-	var s = '',
-		prev = '<div class="films-preview__full">\
-					<img src="img/d009-full.png" alt="">\
-				</div>\
-				<nav class="films-preview__colors-list">';
-	
-	type.forEach(function(item, i) {
-		s += '<li class="films-menu__title" data-popup data-src="">\n';
-		s += item.name;
-		s += '<ul class="films-menu__subtitle-block">'
-		
-		item.sub.forEach(function(item, i) {
-			s += '<li class="films-menu__subtitle' + (id == item.id ? ' active' : '') + '" data-popup data-src="' + item.id + '">' + item.name + '</li>';
-			prev += '<div class="films-preview__color' + (id == item.id ? ' active' : '') + '" data-popup data-src="' + item.id + '" style="background-image: url(' + item.prevUrl + ')"></div>';
 
+
+class Popup {
+	constructor () {
+		this.$block = $('.popup');
+		this.generated = false;
+	}
+	
+	open (id) {
+		if (!this.generated)
+			this.generate();
+		
+		this.switch(id);
+		
+		document.body.classList.add('fancybox-active');
+		this.$block.fadeIn();
+		
+		
+	}
+	
+	close () {
+		this.$block.fadeOut();
+		document.body.classList.remove('fancybox-active');
+	}
+	
+	switch (id) {
+		$('.films-menu__title').removeClass('active');
+		$('.films-menu__subtitle').removeClass('active');
+		$('.films-preview__color').removeClass('active');
+		$('.films-preview__colors-list').removeClass('active');
+
+		$('.films-menu__subtitle[data-src="' + id + '"]').addClass('active').parents('.films-menu__title').addClass('active');
+		$('.films-preview__color[data-src="' + id + '"]').addClass('active').parent().addClass('active');
+	}
+		
+	generate () {
+		
+		var menuHtml = '',
+			colorList = '';
+		
+		var $this = this;
+
+		type.forEach(function(item, i) {
+			menuHtml += '<li class="films-menu__title">\n';
+			menuHtml += '<span class="films-menu__title-link">' + item.name + '</span>';
+			menuHtml += '<ul class="films-menu__subtitle-block">'
+
+			colorList += '<div class="films-preview__colors-list">';
+			item.sub.forEach(function(item, i) {
+				menuHtml += '<li class="films-menu__subtitle" data-popup-in data-src="' + item.id + '">' + item.name + '</li>';
+				colorList += '<div class="films-preview__color" data-popup-in data-src="' + item.id + '" style="background-image: url(' + item.prevUrl + ')"></div>';
+			})
+
+			menuHtml += '</ul>';
+			menuHtml += '</li>';
+
+			colorList += '</div>';
+
+		});
+
+		menuHtml += '<li>\
+					<button type="button" data-fancybox data-src="#payment" class="btn films-menu__btn">Варианты оплаты</button>\
+				</li>\
+				<li>\
+					<button type="button" data-fancybox data-src="#shiping" class="btn films-menu__btn">Доставка заказа</button>\
+				</li>';
+		
+		
+		$this.$block.find('.films-menu').html(menuHtml);
+		$this.$block.find('.films-preview__colors-container').html(colorList);
+
+
+		$('.films-menu__title-link').click(function () {
+			$('.films-menu__title').removeClass('active');
+			$(this).parent().addClass('active');
+		})
+
+		$('[data-popup-in]').click(function () {
+			$this.switch($(this).data('src'));
 		})
 		
-		s += '</ul>';
-		s += '</li>';
+		$('[data-popup-close]').click(function () {
+			$this.close();
+		})
 		
-		
-	});
-	prev += '</nav></div>';
-	s += '<li>\
-			<button type="button" data-fancybox data-src="#payment" class="btn films-menu__btn">Варианты оплаты</button>\
-		</li>\
-		<li>\
-			<button type="button" data-fancybox data-src="#shiping" class="btn films-menu__btn">Доставка заказа</button>\
-		</li>';
-	
-	popup.find('.films-menu').html(s);
-	popup.find('.films-preview').html(prev);
-	
-	
-	$('[data-popup]').click(function () {
-		showPopup($(this).attr('data-src'));
-	});
+		$this.generated = true;
+	}
 }
 
 $(document).ready(function () {
@@ -164,14 +206,11 @@ $(document).ready(function () {
 		section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
 	})
 	
-	
-	$('[data-popup-close]').click(function () {
-		$('.popup').fadeOut();
-		$('body').toggleClass('fancybox-active');
-	})
-	
+	var popup = new Popup();
 	
 	$('[data-popup]').click(function () {
-		showPopup($(this).attr('data-src'));
+//		showPopup($(this).attr('data-src'));
+		popup.open($(this).data('src'));
 	})
+	
 })
