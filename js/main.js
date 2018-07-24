@@ -160,7 +160,7 @@ class Popup {
 			colorList += '<div class="films-preview__colors-list">';
 			item.sub.forEach(function(item, i) {
 				menuHtml += '<li class="films-menu__subtitle" data-popup-in data-src="' + item.id + '">' + item.name + '</li>';
-				colorList += '<div class="films-preview__color" data-popup-in data-src="' + item.id + '" style="background-image: url(' + item.prevUrl + ')"></div>';
+				colorList += '<div class="films-preview__color" data-popup-in data-src="' + item.id + '"><img src="' + item.prevUrl + '" alt="' + item.name + '"></div>';
 			})
 
 			menuHtml += '</ul>';
@@ -199,6 +199,63 @@ class Popup {
 	}
 }
 
+
+function removeSelect () {
+	document.querySelector('.film-list-select').removeChild(this.parentElement);
+}
+
+function addSelect () {
+//	$('.')
+	
+	document.querySelectorAll('.form-popup__select-add').forEach(function (item, i) {
+		item.removeEventListener('click', addSelect);
+		item.classList.remove('form-popup__select-add');
+		item.classList.add('form-popup__select-remove');
+		item.innerHTML = '-';
+		item.addEventListener('click', removeSelect);
+	})
+	
+	var selectHtml = '';
+	
+	type.forEach(function(item, i) {
+		selectHtml += '<optgroup label="' + item.id + '">';
+		
+		item.sub.forEach(function(item, i) {
+			selectHtml += '<option value=”' + item.id + '”>' + item.name + '</option>';
+		})
+		
+		selectHtml += '</optgroup>';
+	});
+		
+	var el = document.createElement('div');
+	var select = document.createElement('select');
+	var input = document.createElement('input');
+	var btn = document.createElement('button');
+
+	el.className = 'form-popup__select-item';
+
+	select.name = '';
+	select.className = 'form-popup__select';
+	select.innerHTML = selectHtml;
+	
+	input.className = 'input form-popup__select-input';
+	input.name = '';
+	input.type = 'number';
+	input.placeholder = 'Размер, м';
+
+	btn.type = 'button';
+	btn.className = 'btn form-popup__select-add';
+	btn.innerHTML = '+';
+
+	btn.addEventListener('click', addSelect);
+
+	el.appendChild(select);
+	el.appendChild(input);
+	el.appendChild(btn);
+
+	document.querySelector('.film-list-select').appendChild(el);
+}
+
 $(document).ready(function () {
 	$('.section__list-item').click(function () {
 		var section = $(this).parents('.section');
@@ -212,5 +269,7 @@ $(document).ready(function () {
 //		showPopup($(this).attr('data-src'));
 		popup.open($(this).data('src'));
 	})
+	
+	addSelect();
 	
 })
