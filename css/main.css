@@ -2809,7 +2809,7 @@ html {
   }
 }
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (min-width: 1800px) {
   html {
@@ -2957,6 +2957,7 @@ audio {
   position: relative;
   text-align: right;
   padding: 90px 0;
+  border-bottom: 2px solid red;
 }
 .section#section-hero {
   height: 100vh;
@@ -3022,7 +3023,7 @@ audio {
   text-shadow: 7px 6px 0 rgba(0, 0, 0, 0.75);
   padding-right: 70px;
   color: white;
-  max-width: 800px;
+  max-width: 820px;
 }
 @media (min-width: 1800px) {
   .section__hero-title {
@@ -3071,9 +3072,10 @@ audio {
   color: white;
 }
 .section__list-item {
-  padding: 20px 27px 21px 70px;
+  padding: 15px 27px 16px 70px;
   min-width: 620px;
   font-size: 1.35rem;
+  font-weight: bold;
   position: relative;
   cursor: pointer;
 }

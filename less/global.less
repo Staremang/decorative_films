@@ -53,7 +53,7 @@
 
 html {
 	
-	font-size: 16px;
+	font-size: 18px;
 	@media (min-width: @width-xxl) {
 		font-size: 20px;
 	}
@@ -63,6 +63,9 @@ body {
 	font-family: @font;
 	font-size: 14px;
 //	background: black;
+	
+//	background: url(../img/rm/1680.jpg) no-repeat;
+//	background-position: top center;
 	
 	
 }
@@ -178,6 +181,7 @@ audio {
 	position: relative;
 	text-align: right;
 	padding: 90px 0;
+	border-bottom: 2px solid red;
 	&#section-hero {
 		height: 100vh;
 		background-image: url(../img/hero-bg.jpg);
@@ -231,7 +235,7 @@ audio {
 		padding-right: 70px;
 //		margin-bottom: 300px;
 		color: white;
-		max-width: 800px;
+		max-width: 820px;
 		
 		@media (min-width: @width-xxl) {
 			max-width: 970px;
@@ -278,9 +282,10 @@ audio {
 	}
 	&__list-item {
 //		border-bottom: 4px solid #949495;
-		padding: 20px 27px 21px 70px;
+		padding: 15px 27px 16px 70px;
 		min-width: 620px;
 		font-size: 1.35rem;
+		font-weight: bold;
 		position: relative;
 		cursor: pointer;
 		&:hover {

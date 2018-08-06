@@ -273,18 +273,18 @@ $(document).ready(function () {
 		popup.open($(this).data('src'));
 	})
 	
-	$('.section__list-item').hover(
-		function () {
-			var section = $(this).parents('.section');
-			section.children('.section__bg').remove();
-			section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
-		}, 
-		function () {
-			var section = $(this).parents('.section');
-			section.children('.section__bg').remove();
-		}
-	)
-	
+//	$('.section__list-item').hover(
+//		function () {
+//			var section = $(this).parents('.section');
+//			section.children('.section__bg').remove();
+//			section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
+//		}, 
+//		function () {
+//			var section = $(this).parents('.section');
+//			section.children('.section__bg').remove();
+//		}
+//	)
+//	
 	addSelect();
 	
 })
