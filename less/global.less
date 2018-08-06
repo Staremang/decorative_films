@@ -230,12 +230,12 @@ audio {
 	}
 	&__hero-title {
 		font-weight: bold;
-		font-size: 4rem;
+		font-size: 4.5rem;
 		text-shadow: 7px 6px 0 rgba(0, 0, 0, 0.75);
 		padding-right: 70px;
 //		margin-bottom: 300px;
 		color: white;
-		max-width: 820px;
+		max-width: 750px;
 		
 		@media (min-width: @width-xxl) {
 			max-width: 970px;
@@ -245,7 +245,7 @@ audio {
 		font-weight: bold;
 		font-size: 3.7rem;
 		text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
-		padding-right: 70px;
+		padding-right: 70px+27;
 		margin: 0;
 		&_white {
 			color: white;
@@ -283,9 +283,9 @@ audio {
 	&__list-item {
 //		border-bottom: 4px solid #949495;
 		padding: 15px 27px 16px 70px;
-		min-width: 620px;
+		min-width: 560px;
 		font-size: 1.35rem;
-		font-weight: bold;
+//		font-weight: bold;
 		position: relative;
 		cursor: pointer;
 		&:hover {
@@ -293,10 +293,10 @@ audio {
 			&:before {
 				content: '';
 				position: absolute;
-				height: 38px;
-				width: 38px;
+				height: 28px;
+				width: 28px;
 				left: 20px;
-				border: 19px solid transparent;
+				border: 14px solid transparent;
 				border-top-color: #00a20b;
 				border-left-color: #00a20b;
 				
@@ -320,6 +320,14 @@ audio {
 			
 			&:after {
 				height: 4px;
+			}
+			&:hover {
+				color: #00a20b;
+				&:before {
+					height: 38px;
+					width: 38px;
+					border: 19px solid transparent;
+				}
 			}
 		}
 	}
