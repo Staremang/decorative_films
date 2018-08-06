@@ -2809,7 +2809,7 @@ html {
   }
 }
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 @media (min-width: 1800px) {
   html {
@@ -3367,6 +3367,9 @@ audio {
   font-weight: bold;
   margin-top: 5px;
 }
+.films-description__text {
+  font-size: 0.875rem;
+}
 .films-description__properties {
   list-style: none;
   padding-left: 40px;
@@ -3374,6 +3377,7 @@ audio {
 .films-description__properties-item {
   margin: 10px 0;
   position: relative;
+  font-size: 0.875rem;
 }
 .films-description__properties-item.icon-lens:before {
   content: '';
