@@ -2949,7 +2949,7 @@ audio {
   text-decoration: underline;
 }
 .section {
-  height: 52.08333333vw;
+  height: 39.28571429vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2957,7 +2957,6 @@ audio {
   position: relative;
   text-align: right;
   padding: 90px 0;
-  border-bottom: 2px solid red;
 }
 .section#section-hero {
   height: 100vh;
