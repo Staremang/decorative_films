@@ -126,12 +126,14 @@ class Popup {
 		
 		document.body.classList.add('fancybox-active');
 		this.$block.fadeIn();
+		this.$block.addClass('active');
 		
 		
 	}
 	
 	close () {
 		this.$block.fadeOut();
+		this.$block.removeClass('active');
 		document.body.classList.remove('fancybox-active');
 	}
 	
@@ -205,13 +207,13 @@ function removeSelect () {
 }
 
 function addSelect () {
-//	$('.')
 	
 	document.querySelectorAll('.form-popup__select-add').forEach(function (item, i) {
 		item.removeEventListener('click', addSelect);
 		item.classList.remove('form-popup__select-add');
 		item.classList.add('form-popup__select-remove');
-		item.innerHTML = '-';
+		item.innerHTML = '–';
+		item.title = 'Удалить наименование';
 		item.addEventListener('click', removeSelect);
 	})
 	
@@ -227,10 +229,10 @@ function addSelect () {
 		selectHtml += '</optgroup>';
 	});
 		
-	var el = document.createElement('div');
-	var select = document.createElement('select');
-	var input = document.createElement('input');
-	var btn = document.createElement('button');
+	var el = document.createElement('div'),
+		select = document.createElement('select'),
+		input = document.createElement('input'),
+		btn = document.createElement('button');
 
 	el.className = 'form-popup__select-item';
 
@@ -246,6 +248,7 @@ function addSelect () {
 	btn.type = 'button';
 	btn.className = 'btn form-popup__select-add';
 	btn.innerHTML = '+';
+	btn.title = 'Добавить наименование';
 
 	btn.addEventListener('click', addSelect);
 
@@ -269,6 +272,18 @@ $(document).ready(function () {
 //		showPopup($(this).attr('data-src'));
 		popup.open($(this).data('src'));
 	})
+	
+	$('.section__list-item').hover(
+		function () {
+			var section = $(this).parents('.section');
+			section.children('.section__bg').remove();
+			section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
+		}, 
+		function () {
+			var section = $(this).parents('.section');
+			section.children('.section__bg').remove();
+		}
+	)
 	
 	addSelect();
 	

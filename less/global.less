@@ -92,8 +92,17 @@ audio {
 	width: 238px;
 	font-weight: bold;
 	padding: 15px;
+	
+	transition: transform .2s ease;
+	&:hover {
+		transform: scale(1.02);
+	}
 }
 
+@keyframes fadeIn {
+	from {opacity: 0}
+	to {opacity: 1}
+}
 
 .header {
 	position: absolute;
@@ -162,7 +171,7 @@ audio {
 	}
 }
 .section {
-	height: 710px;
+	height: 1000/1920*100vw;
 	display: flex;
 	
 	background-size: cover;
@@ -183,10 +192,10 @@ audio {
 		background-image: url(../img/section-3-bg.jpg);
 	}
 	&#section-4 {
-		background-image: url(../img/section-5-bg.jpg);
+		background-image: url(../img/section-4-bg.jpg);
 	}
 	&#section-5 {
-		background-image: url(../img/section-4-bg.jpg);
+		background-image: url(../img/section-5-bg.jpg);
 	}
 	&#section-6 {
 		background-image: url(../img/section-6-bg.jpg); 
@@ -200,6 +209,8 @@ audio {
 		transform: translateZ(0);
 		background-repeat: no-repeat;
 		background-size: contain;
+		
+		animation: fadeIn .7s ease;
 	}
 	&__container {
 		transform: translateZ(0);
@@ -244,7 +255,7 @@ audio {
 		color: black;
 		margin-bottom: 45px;
 		margin-top: 20px;
-		margin-right: 70px;
+		margin-right: 75px;
 		&:after {
 			content: '';
 			position: absolute;
@@ -268,7 +279,7 @@ audio {
 	&__list-item {
 //		border-bottom: 4px solid #949495;
 		padding: 20px 27px 21px 70px;
-		min-width: 700px;
+		min-width: 620px;
 		font-size: 1.35rem;
 		position: relative;
 		cursor: pointer;
@@ -331,8 +342,11 @@ audio {
 	background: rgba(30, 30, 30, 0.83);
 	
 	
+	transform: translateY(-30px);
+	transition: transform .3s ease;
+	
 	&.active {
-		display: block;
+		transform: translateY(0);
 	}
 	&__btn {
 		position: absolute;
