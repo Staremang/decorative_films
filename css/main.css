@@ -2809,17 +2809,16 @@ html {
   }
 }
 html {
-  font-size: 16px;
+  font-size: 14px;
 }
 @media (min-width: 1800px) {
   html {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 body {
   -webkit-font-smoothing: antialiased;
   font-family: 'a_FuturaOrto', sans-sarif;
-  font-size: 14px;
 }
 img,
 video,
