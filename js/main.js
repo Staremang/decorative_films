@@ -260,6 +260,16 @@ function addSelect () {
 }
 
 $(document).ready(function () {
+//	
+//	$('.films-gallery').owlCarousel({
+//		loop: false,
+//		margin:10,
+//		nav:true,
+//		items:3
+//	})
+	$("[data-fancybox]").fancybox({
+		transitionEffect: "slide",
+	});
 	$('.section__list-item').click(function () {
 		var section = $(this).parents('.section');
 		section.children('.section__bg').remove();
