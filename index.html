@@ -14,7 +14,7 @@
 			<div class="header__container">
 				<a href="/" class="header__logo" title="На главную"></a>
 				<nav class="header__nav">
-					<a href="#" class="header__link">Оплата и доставка</a>
+					<a href="#" class="header__link" data-fancybox data-src="#payment_and_shiping" title="">Оплата и доставка</a>
 					<a href="#" class="header__link">Контакты</a>
 				</nav>
 				<a href="#" class="header__link">+7 (960) 900-10-20</a>
@@ -167,9 +167,9 @@
 						<li class="properties-border__item">Подложка: <span class="properties-border__val">PET liner 20µm (0.02mm)</span></li>
 					</ul>
 					<div class="films-gallery">
-						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000.jpg"><img src="img/JPEG/W000.jpg"></a>
-						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_2.jpg"><img src="img/JPEG/W000_2.jpg"></a>
-						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_3.jpg"><img src="img/JPEG/W000_3.jpg"></a>
+						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000.jpg"><img src="img/JPEG/W000_m.jpg"></a>
+						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_2.jpg"><img src="img/JPEG/W000_2_m.jpg"></a>
+						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_3.jpg"><img src="img/JPEG/W000_3_m.jpg"></a>
 					</div>
 					<button type="button" data-fancybox data-src="#order" class="btn films-menu__btn">Оформить заказ</button>
 					
@@ -226,14 +226,50 @@
 		<button type="submit" class="form-popup__btn btn">Отправить заявку</button>
 	</form>
 	
-	<div id="payment" style="display: none;">
-		Оплата заказа
-	</div>
-	<div id="shiping" style="display: none;">
-		Доставка заказа
+	<div id="payment_and_shiping" class="popup-article" style="display: none;">
+		<div class="popup-article__paragraph row">
+			<div class="col-md-3">
+				<h2>Оплата заказа</h2>
+			</div>
+			<div class="col-md-9">
+				<p>Запрос на выставление счета формируется автоматически, после создания пользователем заявки.<br>
+				После обработки заявки, менеджер выставляет счет и направляет его заказчику, по указанным в заявке контактам.<br>
+				При выставлении счета, менеджером проверяется наличие, товар ставится в резерв на 3 рабочих дня, согласуется адрес и способ доставки.<br>
+				Оплата продукции, производится посредством банковского перевода денежных средств на расчетный счет, согласно выставленного ранее счета.<br>
+				Оплата счета может быть произведена равнозначно, как частным, так и юридическим лицом, любым доступным способом.</p>
+			</div>
+		</div>
+		
+		<div class="popup-article__paragraph row">
+			<div class="col-md-3">
+				<h2>Отгрузка/Доставка</h2>
+			</div>
+			<div class="col-md-9">
+			
+
+			<p>Отгрузка продукции со склада - осуществляется в рабочие дни с 9.00 до 18.00.</p>
+
+			<p>Транспортировка по России осуществляется транспортными компаниями за счет заказчика.<br>
+			Доставка товаров до транспортной компании - бесплатно (в рабочие дни с 9.00 до 18.00, выполняется в день оплаты, либо на следующий день).</p>
+
+			<p>Мы работаем со всеми транспортными компаниями.</p>
+
+			<p>Упаковка мерного товара, производится в жесткий тубус, оборачивается стрейч-пленкой и маркируется.<br>
+			Целые рулоны поставляются в заводской картонной упаковке.</p>
+			</div>
+		</div>
+		<div class="popup-article__paragraph row">
+			<div class="col-md-3">
+				<h2>Условия возврата</h2>
+			</div>
+			<div class="col-md-9">
+				<p>Категория товара подпадает под законодательство (статья... пункт...) согласно которого, мерный товар возврату не подлежит.<br>
+				Но мы делаем всё со своей стороны, что-бы возможных эксцессов не происходило.</p>
+			</div>
+		</div>
 	</div>
 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 	
 	<script src="js/owl.carousel.min.js"></script>
 	

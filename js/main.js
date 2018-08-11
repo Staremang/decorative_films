@@ -173,10 +173,7 @@ class Popup {
 		});
 
 		menuHtml += '<li>\
-					<button type="button" data-fancybox data-src="#payment" class="btn films-menu__btn">Варианты оплаты</button>\
-				</li>\
-				<li>\
-					<button type="button" data-fancybox data-src="#shiping" class="btn films-menu__btn">Доставка заказа</button>\
+					<button type="button" data-fancybox data-src="#payment_and_shiping" class="btn films-menu__btn">Оплата и доставка</button>\
 				</li>';
 		
 		
