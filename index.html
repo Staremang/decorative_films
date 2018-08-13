@@ -43,7 +43,7 @@
 					<li class="section__list-item" data-bg="2">Декоративная непроницаемость</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-fancybox data-src="#test" data-film-id="W000" class="section__more-btn btn">Подробнее...</button>
+					<button type="button" data-fancybox data-src="#description" data-film-id="W000" class="section__more-btn btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -61,7 +61,7 @@
 					<li class="section__list-item" data-bg="2">Частичная прозрачность/Полная укрывистость</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-popup data-src="D000" class="section__more-btn btn">Подробнее...</button>
+					<button type="button" data-fancybox data-src="#description" data-film-id="D000" class="section__more-btn btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -79,7 +79,7 @@
 					<li class="section__list-item" data-bg="2">Crystall - с ярко-выраженными блестками</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-popup data-src="#description" class="section__more-btn btn">Подробнее...</button>
+					<button type="button" data-fancybox data-src="#description" data-film-id="W000" class="section__more-btn btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -115,7 +115,7 @@
 					<li class="section__list-item" data-bg="2">Высокая устойчивость к внешним воздействиям</li>
 				</ul>
 				<div class="section__more">
-					<button type="button" data-popup data-src="#description" class="section__more-btn btn">Подробнее...</button>
+					<button type="button" data-fancybox data-src="#description" data-film-id="" class="section__more-btn btn">Подробнее...</button>
 				</div>
 			</div>
 		</div>
@@ -154,57 +154,54 @@
 		</div>
 	</footer>
 -->
-	<div class="popup">
-		<button data-popup-close class="popup__btn"></button>
-		<div class="popup__wrapper" id="test">
-			<div class="popup__container">
-				<ul class="films-menu"></ul>
-				<div class="films-preview">
-					<div class="films-preview__full">
-						<img src="img/d009-full.png" alt="">
-					</div>
-					<nav class="films-preview__colors-container"></nav>
+	<div class="popup" id="description">
+		<div class="popup__container">
+			<ul class="films-menu"></ul>
+			<div class="films-preview">
+				<div class="films-preview__full">
+					<img src="img/d009-full.png" alt="">
 				</div>
-				<div class="films-description">
-					<h2 class="films-description__title">Brilliant Cut</h2>
-					<h3 class="films-description__subtitle">D009  Black</h3>
-					<div class="films-description__content">
-						<div data-tooltip="<table><tr><th>Количество</th><th>Стоимость</th></tr><tr><td>от 1 до 10 метров</td><td>795 руб./м.п.</td></tr><tr><td>свыше 10 метров</td><td>595 руб./м.п.</td></tr><tr><td>кратно рулону</td><td>395 руб./м.п.</td></tr></table>">
-							<div class="films-description__price">от 325* RUB за 1м<sup>2</sup></div>
-							<div class="films-description__price-note">* стоимость указана при приобретении рулона</div>
-						</div>
-						<div class="films-description__text" data-tooltip="Структурированная лицевая поверхность пленки, в сочетании с металлизированными микро-вкраплениями создает визуальный эффект, отчетливо просматриваемый с обеих сторон материала.<br><br>Предпочтительнее, для использования данного эффекта, применять указанный материал но прозрачных и ровных поверхностях.">
-							Самоклеящаяся виниловая пленка, с ярковыраженным декоративным эффектом.
-						</div>
-						<div class="films-description__text" data-tooltip="Материал применяется при оформление офисных и функциональных перегородок, для неповторимого дизайна шкафов-купе, при декорировании окон и витражей, в душевых и ванных комнатах, и других целей.">
-							Пленка предназначен для дизайнерского оформления интерьеров, и сплошного нанесения на ровные поверхности.
-						</div>
-						<div class="films-description__text"><b>Характеристики / Свойства:</b></div>
-						<ul class="films-description__properties">
-							<li class="films-description__properties-item icon-lens">Частично-прозрачная</li>
-							<li class="films-description__properties-item icon-plotter" data-tooltip="Пленка не рекомендована для плоттерной резки изображений. Причина - подложка из тонкого PET (полимерный материал толщиной 20мкм).<br><br>При особой аккуратности и особых параметрах резки, выполнить данную операцию возможно, просто увеличивается риск получения брака.">
-								НЕ рекомендовано для плоттерной резки
-							</li>
-						</ul>
-						<div data-tooltip="Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя прямой фиксации.<br><br>Подложка – PET (Полиэтилентерефталат, 20мкм.)<br><br>Срок эксплуатации – от 3 лет (внутри помещений)">
-							<ul class="properties-border">
-								<li class="properties-border__item">Размер рулона: <span class="properties-border__val">1220mm х 50m</span></li>
-								<li class="properties-border__item">Основа: <span class="properties-border__val">PVC 110µm + glue 20µm</span></li>
-								<li class="properties-border__item">Подложка: <span class="properties-border__val">PET liner 20µm (0.02mm)</span></li>
-							</ul>
-						</div>
-						<ul class="films-description__properties">
-							<li class="films-description__properties-item icon-tovar-min" data-tooltip="Продажа осуществляется только погонными метрами, в любом требуемом количестве (при заказе более 1 п.м.)<br>Минимальный заказ – 1 погонный метр.">Продается только погонными метрами.<br>Минимальное количество - 1 п.м.</li>
+				<nav class="films-preview__colors-container"></nav>
+			</div>
+			<div class="films-description">
+				<h2 class="films-description__title">Brilliant Cut</h2>
+				<h3 class="films-description__subtitle">D009  Black</h3>
+				<div class="films-description__content">
+					<div data-tooltip="<table><tr><th>Количество</th><th>Стоимость</th></tr><tr><td>от 1 до 10 метров</td><td>795 руб./м.п.</td></tr><tr><td>свыше 10 метров</td><td>595 руб./м.п.</td></tr><tr><td>кратно рулону</td><td>395 руб./м.п.</td></tr></table>">
+						<div class="films-description__price">от 325* RUB за 1м<sup>2</sup></div>
+						<div class="films-description__price-note">* стоимость указана при приобретении рулона</div>
+					</div>
+					<div class="films-description__text" data-tooltip="Структурированная лицевая поверхность пленки, в сочетании с металлизированными микро-вкраплениями создает визуальный эффект, отчетливо просматриваемый с обеих сторон материала.<br><br>Предпочтительнее, для использования данного эффекта, применять указанный материал но прозрачных и ровных поверхностях.">
+						Самоклеящаяся виниловая пленка, с ярковыраженным декоративным эффектом.
+					</div>
+					<div class="films-description__text" data-tooltip="Материал применяется при оформление офисных и функциональных перегородок, для неповторимого дизайна шкафов-купе, при декорировании окон и витражей, в душевых и ванных комнатах, и других целей.">
+						Пленка предназначена для дизайнерского оформления интерьеров, и сплошного нанесения на ровные поверхности.
+					</div>
+					<div class="films-description__text"><b>Характеристики / Свойства:</b></div>
+					<ul class="films-description__properties">
+						<li class="films-description__properties-item icon-lens">Частично-прозрачная</li>
+						<li class="films-description__properties-item icon-plotter" data-tooltip="Пленка не рекомендована для плоттерной резки изображений. Причина - подложка из тонкого PET (полимерный материал толщиной 20мкм).<br><br>При особой аккуратности и особых параметрах резки, выполнить данную операцию возможно, просто увеличивается риск получения брака.">
+							НЕ рекомендовано для плоттерной резки
+						</li>
+					</ul>
+					<div data-tooltip="Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя прямой фиксации.<br><br>Подложка – PET (Полиэтилентерефталат, 20мкм.)<br><br>Срок эксплуатации – от 3 лет (внутри помещений)">
+						<ul class="properties-border">
+							<li class="properties-border__item">Размер рулона: <span class="properties-border__val">1220mm х 50m</span></li>
+							<li class="properties-border__item">Основа: <span class="properties-border__val">PVC 110µm + glue 20µm</span></li>
+							<li class="properties-border__item">Подложка: <span class="properties-border__val">PET liner 20µm (0.02mm)</span></li>
 						</ul>
 					</div>
-					<div class="films-gallery">
-						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000.jpg"><img src="img/JPEG/W000_m.jpg"></a>
-						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_2.jpg"><img src="img/JPEG/W000_2_m.jpg"></a>
-						<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_3.jpg"><img src="img/JPEG/W000_3_m.jpg"></a>
-					</div>
-					<button type="button" data-fancybox data-src="#order" class="btn films-description__btn">Оформить заказ</button>
-					
+					<ul class="films-description__properties">
+						<li class="films-description__properties-item icon-tovar-min" data-tooltip="Продажа осуществляется только погонными метрами, в любом требуемом количестве (при заказе более 1 п.м.)<br>Минимальный заказ – 1 погонный метр.">Продается только погонными метрами.<br>Минимальное количество - 1 п.м.</li>
+					</ul>
 				</div>
+				<div class="films-gallery">
+					<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000.jpg"><img src="img/JPEG/W000_m.jpg"></a>
+					<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_2.jpg"><img src="img/JPEG/W000_2_m.jpg"></a>
+					<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_3.jpg"><img src="img/JPEG/W000_3_m.jpg"></a>
+				</div>
+				<button type="button" data-fancybox data-src="#order" class="btn films-description__btn">Оформить заказ</button>
+
 			</div>
 		</div>
 	</div>
@@ -257,7 +254,7 @@
 		<button type="submit" class="form-popup__btn btn">Отправить заявку</button>
 	</form>
 	
-	<div id="payment_and_shiping" class="popup-article" style="display: none;">
+	<div class="popup-article" id="payment_and_shiping" style="display: none;">
 		<div class="popup-article__paragraph row">
 			<div class="col-md-3">
 				<h2>Оплата заказа</h2>
@@ -273,7 +270,7 @@
 		
 		<div class="popup-article__paragraph row">
 			<div class="col-md-3">
-				<h2>Отгрузка/Доставка</h2>
+				<h2>Отгрузка / Доставка</h2>
 			</div>
 			<div class="col-md-9">
 			
@@ -299,6 +296,11 @@
 			</div>
 		</div>
 	</div>
+	
+	
+	
+	
+	
 	
 	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
 	

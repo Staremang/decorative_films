@@ -114,8 +114,8 @@
 
 class Popup {
 	constructor () {
-//		this.$block = $('.popup');
-		this.$block = $('.popup__wrapper');
+		this.$block = $('.popup');
+//		this.$block = $('.popup__wrapper');
 		this.generated = false;
 	}
 	
