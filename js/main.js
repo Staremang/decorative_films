@@ -114,7 +114,8 @@
 
 class Popup {
 	constructor () {
-		this.$block = $('.popup');
+//		this.$block = $('.popup');
+		this.$block = $('.popup__wrapper');
 		this.generated = false;
 	}
 	
@@ -124,19 +125,19 @@ class Popup {
 		
 		this.switch(id);
 		
-		document.body.classList.add('fancybox-active');
-		this.$block.fadeIn();
-		this.$block.addClass('active');
-		
+//		document.body.classList.add('fancybox-active');
+//		this.$block.fadeIn();
+//		this.$block.addClass('active');
+//		
 		
 	}
 	
-	close () {
-		this.$block.fadeOut();
-		this.$block.removeClass('active');
-		document.body.classList.remove('fancybox-active');
-	}
-	
+//	close () {
+//		this.$block.fadeOut();
+//		this.$block.removeClass('active');
+//		document.body.classList.remove('fancybox-active');
+//	}
+//	
 	switch (id) {
 		$('.films-menu__title').removeClass('active');
 		$('.films-menu__subtitle').removeClass('active');
@@ -145,14 +146,42 @@ class Popup {
 
 		$('.films-menu__subtitle[data-src="' + id + '"]').addClass('active').parents('.films-menu__title').addClass('active');
 		$('.films-preview__color[data-src="' + id + '"]').addClass('active').parent().addClass('active');
+		
+//		$('.films-gallery').
+		var t, data;
+		type.some(function(item, i) {
+			t = item;
+			return item.sub.some(function(item, i) {
+				data = item;
+				return (id === item.id);
+			})
+		});
+		
+		$('.films-description__title').text(t.name);
+		$('.films-description__subtitle').text(data.name);
+		
+		
+		$('.films-gallery').empty();
+		if (data.galleryPrev) {
+			data.galleryPrev.forEach(function (item) {
+				$('.films-gallery').append('<a class="films-gallery__item" data-fancybox="gallery" href="' + item[0] + '"><img src="' + item[1] + '"></a>');
+			})
+		}
+		
+//		$('.films-description__content').html(data.description || t.description);
 	}
 		
 	generate () {
 		
 		var menuHtml = '',
-			colorList = '';
+			colorList = '',
+			description = '';
 		
 		var $this = this;
+		
+		
+//		description = '';
+		
 
 		type.forEach(function(item, i) {
 			menuHtml += '<li class="films-menu__title">\n';
@@ -190,9 +219,9 @@ class Popup {
 			$this.switch($(this).data('src'));
 		})
 		
-		$('[data-popup-close]').click(function () {
-			$this.close();
-		})
+//		$('[data-popup-close]').click(function () {
+//			$this.close();
+//		})
 		
 		$this.generated = true;
 	}
@@ -256,6 +285,58 @@ function addSelect () {
 	document.querySelector('.film-list-select').appendChild(el);
 }
 
+$.fn.tooltip = function () {
+	var b = '';
+	
+	$(this).each(function () {
+		if ($(this).data('tooltip') == "") {
+			return;
+		}
+
+		b = '<div class="tooltip">\
+					<div class="tooltip__icon"></div>\
+					<div class="tooltip__content">' 
+						+ $(this).data('tooltip') + 
+					'</div>\
+				</div>';
+
+		$(this).prepend(b);
+	})
+}
+//$.fn.nwfTooltip = function(showTime, hideTime){
+//    if(!$(this).attr('title')) { return; }
+//    var tooltipTitle, 
+//		posTop, 
+//		posLeft, 
+//		titleTxt;
+//    var tooltipBlock = '<div class="nwf-tooltip">' + tooltipTitle + '</div>';
+//	
+//    $(this).mouseover(function(e){
+//        posTop = e.pageY;
+//        posLeft = e.pageX;
+//        titleTxt = $(this).attr('title');
+//        $(this).attr('title','');
+//        $(tooltipBlock).text(titleTxt).appendTo('body').css({
+//            top: posTop,
+//            left: posLeft
+//        }).fadeIn(showTime);
+//
+//        $(document).on('mousemove',function(evt){
+//            if($('.nwf-tooltip').css('display') == 'block'){
+//                $('.nwf-tooltip').css({
+//                    left: evt.pageX,
+//                    top: evt.pageY
+//                });
+//            }
+//        });
+//    }).mouseout(function(){
+//        $(this).attr('title',titleTxt);
+//        $('.nwf-tooltip').fadeOut(hideTime, function(){
+//            $(this).remove();
+//        });
+//    });
+//};
+
 $(document).ready(function () {
 //	
 //	$('.films-gallery').owlCarousel({
@@ -268,17 +349,22 @@ $(document).ready(function () {
 		transitionEffect: "slide",
 	});
 	$('.section__list-item').click(function () {
+//		console.log($(this).index($(this).parent()));
 		var section = $(this).parents('.section');
-		section.children('.section__bg').remove();
-		section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
+		section.find('.section__bg').removeClass('active');
+		section.find('.section__bg').eq($(this).data('bg')).addClass('active');
+//		section.prepend('<div class="section__bg" style="background-image: url(' + $(this).data('bg') + ')"></div>');
 	})
 	
 	var popup = new Popup();
 	
-	$('[data-popup]').click(function () {
+	$('[data-film-id]').click(function () {
+//		console.log(popup, $(this).data('film-id'));
 //		showPopup($(this).attr('data-src'));
-		popup.open($(this).data('src'));
+		popup.open($(this).data('film-id'));
 	})
+	
+    $('[data-tooltip]').tooltip();
 	
 //	$('.section__list-item').hover(
 //		function () {
