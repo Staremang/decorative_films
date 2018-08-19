@@ -117,6 +117,7 @@ class Popup {
 		this.$block = $('.popup');
 //		this.$block = $('.popup__wrapper');
 		this.generated = false;
+		this.lastDescription = '';
 	}
 	
 	open (id) {
@@ -168,7 +169,11 @@ class Popup {
 			})
 		}
 		
-//		$('.films-description__content').html(data.description || t.description);
+		if ((data.description || t.description) !== this.lastDescription) {
+			this.lastDescription = data.description || t.description;
+			$('.films-description__content').html(data.description || t.description);
+			$('[data-tooltip]').tooltip();
+		}
 	}
 		
 	generate () {
@@ -204,6 +209,7 @@ class Popup {
 		menuHtml += '<li>\
 					<button type="button" data-fancybox data-src="#payment_and_shiping" class="btn films-menu__btn">Оплата и доставка</button>\
 				</li>';
+		menuHtml += '<button type="button" data-fancybox data-src="#order" class="btn films-menu__btn">Оформить заказ</button>';
 		
 		
 		$this.$block.find('.films-menu').html(menuHtml);
@@ -289,7 +295,7 @@ $.fn.tooltip = function () {
 	var b = '';
 	
 	$(this).each(function () {
-		if ($(this).data('tooltip') == "") {
+		if ($(this).data('tooltip') == "" || $(this).children('.tooltip').length != 0) {
 			return;
 		}
 
