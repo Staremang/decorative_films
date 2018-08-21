@@ -305,7 +305,8 @@ $.fn.tooltip = function () {
 						+ $(this).data('tooltip') + 
 					'</div>\
 				</div>';
-
+		
+		$(this).removeAttr('data-tooltip');
 		$(this).prepend(b);
 	})
 }
