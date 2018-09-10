@@ -252,7 +252,7 @@ function addSelect () {
 	var selectHtml = '';
 	
 	type.forEach(function(item, i) {
-		selectHtml += '<optgroup label="' + item.id + '">';
+		selectHtml += '<optgroup label="' + item.name + '">';
 		
 		item.sub.forEach(function(item, i) {
 			selectHtml += '<option value=”' + item.id + '”>' + item.name + '</option>';

@@ -1,43 +1,21 @@
 class TodoApp extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { 
-				items: [], 
-				text: '' 
-			};
-		
+		this.state = {items: [0, 0, 1, 0]};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
-	}		
+	}
 
 	render() {
 		return (
-			this.state.items.map(item => (
-				<div className="form-popup__select-item">
-
-					<select className="form-popup__select">
-						<option>W000 Silvery</option>
-					</select>
-					<input className="input form-popup__select-input" name="" type="number" placeholder="Размер, м">
-					<button type="button" class="btn form-popup__select-add" title="Добавить наименование">+</button>
-					
-					<h3>TODO</h3>
-					<TodoList items={this.state.items} />
-					<form onSubmit={this.handleSubmit}>
-						<label htmlFor="new-todo">
-							What needs to be done?
-						</label>
-						<input
-							id="new-todo"
-							onChange={this.handleChange}
-							value={this.state.text}
-						/>
-						<button>
-							Add #{this.state.items.length + 1}
-						</button>
-					</form>
-				</div>
-			))
+			<div>
+				{this.state.items.forEach(function (item) {
+					console.log(item);
+					return <p>{item}</p>;
+				})}
+				<h3>TODO</h3>
+				<TodoList items={this.state.items} />
+			</div>
 		);
 	}
 
@@ -58,23 +36,20 @@ class TodoApp extends React.Component {
 			items: prevState.items.concat(newItem),
 			text: ''
 		}));
-		console.log(this.state);
 	}
 }
 
 class TodoList extends React.Component {
 	render() {
 		return (
-			<ul>
-				{this.props.items.map(item => (
-					<li key={item.id}>{item.text}</li>
-				))}
-			</ul>
+			<div>
+				{this.props.items.map(function (item) {
+				  return <p>{item}</p>;
+				})}
+			</div>
 		);
 	}
 }
-
-
 const mountNode = document.getElementById('testReact');
 
 ReactDOM.render(<TodoApp />, mountNode);

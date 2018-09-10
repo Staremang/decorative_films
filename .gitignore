@@ -1,5 +1,4 @@
 
 prepros-6.config
 *.icloud
-img/JPEG/.DS_Store
-img/.DS_Store
+*.DS_Store
