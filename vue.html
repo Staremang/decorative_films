@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/main.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+
+	<div id="app">
+		<div class="popup__container">
+			<!--			<list class="films-menu" :model="type"></list>-->
+			
+			<ul class="films-menu">
+				<li 
+				v-for="t in type" 
+				:class="['films-menu__title', {active: currentType === t.category}]">
+					<span 
+					class="films-menu__title-link" 
+					@click="currentType = t.category">
+						{{t.name}}
+					</span>
+					<ul class="films-menu__subtitle-block">
+						<li 
+						v-for="f in t.sub" 
+						:class="['films-menu__subtitle', {active: currentFilm === f.id}]" 
+						@click="changeFilm( f.id )">
+							{{f.name}}
+						</li>
+					</ul>
+				</li>
+				<li>
+					<button type="button" data-fancybox="" data-src="#payment_and_shiping" class="btn films-menu__btn">Оплата и доставка</button>
+				</li>
+				<button type="button" data-fancybox="" data-src="#order" class="btn films-menu__btn">Оформить заказ</button>
+			</ul>
+			<div class="films-preview">
+				<div class="films-preview__full">
+					<img src="img/d009-full.png" alt="">
+				</div>
+				<nav class="films-preview__colors-container">
+					<div 
+					v-for="t in type" 
+					:class="['films-preview__colors-list', {active: t.category === currentType}]">
+						<div 
+						v-for="f in t.sub" 
+						:class="['films-preview__color', {active: f.id === currentFilm}]" 
+						@click="changeFilm( f.id )">
+							<img :src="f.prevUrl" :alt="f.name">
+						</div>
+					</div>
+				</nav>
+			</div>
+			<film-description :selected-film="selectedFilm" class="films-description"></film-description>
+		</div>
+	</div>
+
+	<script src="js/vue.js"></script>
+</body>
+
+</html>
