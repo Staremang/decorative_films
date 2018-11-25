@@ -6,6 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="css/main.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	
 </head> 
 <body class="">
@@ -23,122 +24,67 @@
 	</header>
 	
 	
-	<section class="section" id="section-hero">
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__hero-title">ДЕКОРАТИВНЫЕ ПЛЕНКИ ДЛЯ СТЕКЛА</h1>
-			</div>
-		</div>
-	</section>
-	<section class="section" id="section-1">
-		<div class="section__bg" style="background-image: url(img/s-1_1.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-1_2.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-1_3.jpg)"></div>
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__title section__title_white">Brilliant Cut</h1>
-				<ul class="section__list section__list_bg">
-					<li class="section__list-item" data-bg="0">Максимальный визуальный эффект</li>
-					<li class="section__list-item" data-bg="1">Искрящийся блеск с обеих сторон</li>
-					<li class="section__list-item" data-bg="2">Декоративная непроницаемость</li>
-				</ul>
-				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" data-film-id="W000" class="section__more-btn btn">Подробнее...</button>
+	<div id="app">
+		<section class="section" id="section-hero">
+			<div class="container">
+				<div class="section__container">
+					<h1 class="section__hero-title">ДЕКОРАТИВНЫЕ ПЛЕНКИ ДЛЯ СТЕКЛА</h1>
 				</div>
 			</div>
-		</div>
-	</section>
-	<section class="section" id="section-2">
-		<div class="section__bg" style="background-image: url(img/s-2_1.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-2_2.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-2_3.jpg)"></div>
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__title">Diamond Grit</h1>
-				<ul class="section__list">
-					<li class="section__list-item" data-bg="0">Для необычайно эксклюзивных решений</li>
-					<li class="section__list-item" data-bg="1">Сверкающий эффект в 12 цветовых решениях</li>
-					<li class="section__list-item" data-bg="2">Частичная прозрачность/Полная укрывистость</li>
+		</section>
+		
+		<sections-item class="section" v-for="section in sections" :key="section.id" :sections-item="section" @open-modal="openModal($event[0], $event[1])"></sections-item>
+		
+		<modal v-if="showModal" @close="closeModal()">
+			<div class="popup__container" slot="container">
+				<ul class="films-menu">
+					<li 
+					v-for="t in type" 
+					:class="['films-menu__title', {active: currentType === t.category}]">
+						<span 
+						class="films-menu__title-link" 
+						@click="currentType = t.category">
+							{{t.name}}
+						</span>
+						<ul class="films-menu__subtitle-block">
+							<li 
+							v-for="f in t.sub" 
+							:class="['films-menu__subtitle', {active: currentFilm === f.id}]" 
+							@click="changeFilm( f.id )">
+								{{f.name}}
+							</li>
+						</ul>
+					</li>
+					<li>
+						<button type="button" data-fancybox="" data-src="#payment_and_shiping" class="btn films-menu__btn">Оплата и доставка</button>
+					</li>
+					<button type="button" data-fancybox="" data-src="#order" class="btn films-menu__btn">Оформить заказ</button>
+
+					
 				</ul>
-				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" data-film-id="D000" class="section__more-btn btn">Подробнее...</button>
+				<div class="films-preview">
+					<div class="films-preview__full">
+						<img src="img/d009-full.png" alt="">
+					</div>
+					<nav class="films-preview__colors-container">
+						<div 
+						v-for="t in type" 
+						v-show="t.category === currentType"
+						:class="['films-preview__colors-list']">
+							<div 
+							v-for="f in t.sub" 
+							:class="['films-preview__color', {active: f.id === currentFilm}]" 
+							@click="changeFilm( f.id )">
+								<img :src="f.prevUrl" :alt="f.name">
+							</div>
+						</div>
+					</nav>
 				</div>
+				<film-description :selected-film="selectedFilm" class="films-description"></film-description>
 			</div>
-		</div>
-	</section>
-	<section class="section" id="section-3">
-		<div class="section__bg" style="background-image: url(img/s-3_1.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-3_2.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-3_3.jpg)"></div>
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__title section__title_white">Crystall & Sandblast</h1>
-				<ul class="section__list section__list_bg">
-					<li class="section__list-item" data-bg="0">Для создания эффектных декоративных узоров</li>
-					<li class="section__list-item" data-bg="1">Sandblast - эффект пескоструйной обработки</li>
-					<li class="section__list-item" data-bg="2">Crystall - с ярко-выраженными блестками</li>
-				</ul>
-				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" data-film-id="F000" class="section__more-btn btn">Подробнее...</button>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section" id="section-4">
-		<div class="section__bg" style="background-image: url(img/s-4_1.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-4_2.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-4_3.jpg)"></div>
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__title">Decorative</h1>
-				<ul class="section__list">
-					<li class="section__list-item" data-bg="0">Готовые решения для декора интерьеров</li>
-					<li class="section__list-item" data-bg="1">Широкое разнообразие изображений</li>
-					<li class="section__list-item" data-bg="2">Легкое нанесение за счет статики</li>
-				</ul>
-				<div class="section__more">
-					<a href="Catalog_Decorative.pdf" target="_blank" class="section__more-btn btn">Скачать каталог</a>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section" id="section-5">
-		<div class="section__bg" style="background-image: url(img/s-5_1.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-5_2.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-5_3.jpg)"></div>
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__title section__title_white">WoodGrain</h1>
-				<ul class="section__list section__list_bg">
-					<li class="section__list-item" data-bg="0">Ярко выраженная текстура древесины</li>
-					<li class="section__list-item" data-bg="1">Иммитация 5 основных древесных оттенков</li>
-					<li class="section__list-item" data-bg="2">Высокая устойчивость к внешним воздействиям</li>
-				</ul>
-				<div class="section__more">
-					<button type="button" data-fancybox data-src="#description" data-film-id="G402" class="section__more-btn btn">Подробнее...</button>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="section" id="section-6">
-		<div class="section__bg" style="background-image: url(img/s-6_1.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-6_2.jpg)"></div>
-		<div class="section__bg" style="background-image: url(img/s-6_3.jpg)"></div>
-		<div class="container">
-			<div class="section__container">
-				<h1 class="section__title">Design&Creation</h1>
-				<ul class="section__list">
-					<li class="section__list-item" data-bg="0">Индивидуальный дизайн</li>
-					<li class="section__list-item" data-bg="1">Подготовка для последующего монтажа</li>
-					<li class="section__list-item" data-bg="2">Интерьерная печать и плоттерная резка пленок</li>
-				</ul>
-				<div class="section__more">
-					<a href="#" class="section__more-btn btn">Скачать каталог</a> 
-					<button type="button" data-fancybox data-src="#design" class="section__more-btn btn">Задать вопрос</button>
-				</div>
-			</div>
-		</div>
-	</section>
+		</modal>
+		
+	</div>
 <!--
 	<footer class="footer">
 		<div class="container">
@@ -154,60 +100,6 @@
 		</div>
 	</footer>
 -->
-	<div class="popup" id="description"  style="display: none;">
-		<div class="popup__container">
-			<ul class="films-menu"></ul>
-			<div class="films-preview">
-				<div class="films-preview__full">
-					<img src="img/d009-full.png" alt="">
-				</div>
-				<nav class="films-preview__colors-container"></nav>
-			</div>
-			<div class="films-description">
-				<h2 class="films-description__title">Brilliant Cut</h2>
-				<h3 class="films-description__subtitle">D009  Black</h3>
-				<div class="films-description__content">
-<!--
-					<div data-tooltip="<table><tr><th>Количество</th><th>Стоимость</th></tr><tr><td>от 1 до 10 метров</td><td>795 руб./м.п.</td></tr><tr><td>свыше 10 метров</td><td>595 руб./м.п.</td></tr><tr><td>кратно рулону</td><td>395 руб./м.п.</td></tr></table>">
-						<div class="films-description__price">от 325* RUB за 1м<sup>2</sup></div>
-						<div class="films-description__price-note">* стоимость указана при приобретении рулона</div>
-					</div>
-					<div class="films-description__text" data-tooltip="Структурированная лицевая поверхность пленки, в сочетании с металлизированными микро-вкраплениями создает визуальный эффект, отчетливо просматриваемый с обеих сторон материала.<br><br>Предпочтительнее, для использования данного эффекта, применять указанный материал но прозрачных и ровных поверхностях.">
-						Самоклеящаяся виниловая пленка, с ярковыраженным декоративным эффектом.
-					</div>
-					<div class="films-description__text" data-tooltip="Материал применяется при оформление офисных и функциональных перегородок, для неповторимого дизайна шкафов-купе, при декорировании окон и витражей, в душевых и ванных комнатах, и других целей.">
-						Пленка предназначена для дизайнерского оформления интерьеров, и сплошного нанесения на ровные поверхности.
-					</div>
-					<div class="films-description__text"><b>Характеристики / Свойства:</b></div>
-					<ul class="films-description__properties">
-						<li class="films-description__properties-item icon-lens">Частично-прозрачная</li>
-						<li class="films-description__properties-item icon-plotter" data-tooltip="Пленка не рекомендована для плоттерной резки изображений. Причина - подложка из тонкого PET (полимерный материал толщиной 20мкм).<br><br>При особой аккуратности и особых параметрах резки, выполнить данную операцию возможно, просто увеличивается риск получения брака.">
-							НЕ рекомендовано для плоттерной резки
-						</li>
-					</ul>
-					<div data-tooltip="Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя, прямой фиксации.<br><br>Подложка – PET (полиэтилентерефталат, 20мкм.)<br><br>Срок эксплуатации – от 3 лет (внутри помещений)">
-						<ul class="properties-border">
-							<li class="properties-border__item">Размер рулона: <span class="properties-border__val">1220mm х 50m</span></li>
-							<li class="properties-border__item">Основа: <span class="properties-border__val">PVC 110µm + glue 20µm</span></li>
-							<li class="properties-border__item">Подложка: <span class="properties-border__val">PET liner 20µm (0.02mm)</span></li>
-						</ul>
-					</div>
-					<ul class="films-description__properties">
-						<li class="films-description__properties-item icon-tovar-min" data-tooltip="Продажа осуществляется только погонными метрами, в любом требуемом количестве (при заказе более 1 п.м.)<br>Минимальный заказ – 1 погонный метр.">Продается только погонными метрами.<br>Минимальное количество - 1 п.м.</li>
-					</ul>
--->
-				</div>
-				<div class="films-gallery">
-					<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000.jpg"><img src="img/JPEG/W000_m.jpg"></a>
-					<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_2.jpg"><img src="img/JPEG/W000_2_m.jpg"></a>
-					<a class="films-gallery__item" data-fancybox="gallery" href="img/JPEG/W000_3.jpg"><img src="img/JPEG/W000_3_m.jpg"></a>
-				</div>
-<!--				<button type="button" data-fancybox data-src="#order" class="btn films-description__btn">Оформить заказ</button>-->
-
-			</div>
-		</div>
-	</div>
-	
 	
 	<form class="form-popup" id="order" style="display: none;">
 		<div class="form-popup__title">Оформление заказа</div>
@@ -223,29 +115,23 @@
 			Ваш номер телефона:
 			<input class="input form-popup__input" type="tel" name="tel" placeholder="+7 (000) 000 00 00" required>
 		</label>
-		
-<!--		<div class="form-popup__select-container" id="testReact"></div>-->
-		
-		<label class="form-popup__label">Выберите наименования:</label>
-		
-		<div class="form-popup__select-container film-list-select"></div>
-		
+
 <!--
-		<div class="form-popup__select-item">
-			<select name="" class="form-popup__select">
-				<optgroup label="undefined"><option value="”W000”">W000 Silvery</option><option value="”W100”">W100 Golden</option><option value="”W200”">W200 Lilac tint</option><option value="”W300”">W300 Purple</option></optgroup><optgroup label="undefined"><option value="”D000”">D000 Colorless</option><option value="”D001”">D001 Cherry red</option><option value="”D002”">D002 Azure sea</option><option value="”D003”">D003 Light green</option><option value="”D004”">D004 Lilac tint</option><option value="”D005”">D005 Poison rose</option><option value="”D006”">D006 Smoky black</option><option value="”D007”">D007 Golden orange</option><option value="”D008”">D008 Blue sky</option><option value="”D009”">D009 Black</option><option value="”D010”">D010 Caustic yellow</option><option value="”D011”">D011 Light lemo</option></optgroup><optgroup label="undefined"></optgroup><optgroup label="undefined"></optgroup>
-			</select>
-			<input class="input form-popup__select-input" name="" type="number" placeholder="Размер, м">
-			<button type="button" class="btn form-popup__select-add" title="Добавить наименование">+</button>
-		</div>
+		<label class="form-popup__label">Выберите наименования:</label>
+
+		<film-list-select :film-list="type"  class="form-popup__select-item"></film-list-select>
 -->
-		
+
+
 		<label class="form-popup__label">
 			Опишите, что вам требуется:
 			<textarea class="input form-popup__input" name="msg" id="" rows="5" placeholder="D009, 10 метров"></textarea>
 		</label>
+
+		<input type="hidden" name="form-type" value="film">
 		<button type="submit" class="form-popup__btn btn" title="Отправить форму с заказом">Оформить заказ</button>
 	</form>
+	
 	
 	<form class="form-popup" id="design" style="display: none;">
 		<div class="form-popup__title">Заявка на дизайн</div>
@@ -265,6 +151,7 @@
 			Опишите заказ:
 			<textarea class="input form-popup__input" name="msg" id="" rows="5" placeholder="Дизайн магазина мебели"></textarea>
 		</label>
+		<input type="hidden" name="form-type" value="design">
 		<button type="submit" class="form-popup__btn btn">Отправить заявку</button>
 	</form>
 	
@@ -312,36 +199,88 @@
 	
 	
 	
-	
-<!--
-	
-    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-    
--->
+	<script src="js/vue-dist.js"></script>
 	
 	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
-	
-	<script src="js/owl.carousel.min.js"></script>
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
 	<script>
-		var type;
-		
-	$.getJSON('film.json', function (data) {
-			console.log(data.type)
-		})
-		.done(function (json) {
-			type = json.type;
-		})
-		.fail(function (jqxhr, textStatus, error) {
-			var err = textStatus + ", " + error;
-			console.log("Request Failed: " + err);
+	$('form').on('submit', function (e) {
+		e.preventDefault();
+
+		var form = $(this),
+			data = $(this).serialize(),
+			id = $(this).attr('id'),
+			submitBtn = $(this).find('button[type="submit"]'),
+			submitBtnText = submitBtn.text(),
+			sentForms = JSON.parse(localStorage.getItem('sentForms'));
+
+		$.ajax({
+			type: "POST",
+			url: 'mail.php',
+			data: data,
+			beforeSend: function () {
+				submitBtn.attr('disabled', '');
+				submitBtn.text('Отправка...');
+			},
+			error: function (error) {
+				alert('Ошибка ' + error.status + '. Повторите позднее.');
+				submitBtn.removeAttr('disabled');
+				submitBtn.text(submitBtnText);
+			},
+			success: function (data) {
+				submitBtn.removeAttr('disabled');
+				submitBtn.text(submitBtnText);
+
+				data = JSON.parse(data);
+
+				var targetName = '';
+
+				
+				if (data.sended) {
+					form[0].reset();
+					$.fancybox.close();
+				} else {
+					alert(data.message);
+				}
+				
+//				if (data.sended) {
+//					switch (id) {
+//						case 'call-me-form':
+//							$.fancybox.close();
+//							$.fancybox.open($('#thanks'));
+//							targetName = 'zvonok';
+//							break;
+//
+//							// Формы(2) "Узнать подробнее" на промо-строанице 1 (/)
+//						case 'promo-form-1':
+//						case 'promo-form-2':
+//							$.fancybox.close();
+//							$.fancybox.open($('#thanks'));
+//
+//							targetName = 'promo'; 
+//							break;
+//
+//							// Формы(2) гостевого визита на промо-строанице 2 (/gostevoi)
+//						case 'guest-visit-promo-form-1':
+//						case 'guest-visit-promo-form-2':
+//							$.fancybox.close();
+//							$.fancybox.open($('#thanks'));
+//
+//							targetName = 'gostevoi';
+//							break;
+//					}
+//					
+//					form[0].reset();
+//
+//				} else {
+//					alert(data.message);
+//				}
+
+			}
 		});
-	
+	});
 	</script>
-	<script src="js/main.min.js"></script>
-<!--	<script src="js/script.min.js"></script>-->
 </body>
 </html>

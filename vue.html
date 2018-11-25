@@ -37,6 +37,35 @@
 					<button type="button" data-fancybox="" data-src="#payment_and_shiping" class="btn films-menu__btn">Оплата и доставка</button>
 				</li>
 				<button type="button" data-fancybox="" data-src="#order" class="btn films-menu__btn">Оформить заказ</button>
+				
+				<form class="form-popup" id="order" style="display: none;">
+					<div class="form-popup__title">Оформление заказа</div>
+					<label class="form-popup__label">
+						Ваше имя:
+						<input class="input form-popup__input" type="text" name="name" placeholder="Роман" required>
+					</label>
+					<label class="form-popup__label">
+						Ваш email:
+						<input class="input form-popup__input" type="email" name="email" placeholder="mail@email.com" required>
+					</label>
+					<label class="form-popup__label">
+						Ваш номер телефона:
+						<input class="input form-popup__input" type="tel" name="tel" placeholder="+7 (000) 000 00 00" required>
+					</label>
+
+<!--
+					<label class="form-popup__label">Выберите наименования:</label>
+
+					<film-list-select :film-list="type"  class="form-popup__select-item"></film-list-select>
+-->
+					
+
+					<label class="form-popup__label">
+						Опишите, что вам требуется:
+						<textarea class="input form-popup__input" name="msg" id="" rows="5" placeholder="D009, 10 метров"></textarea>
+					</label>
+					<button type="submit" class="form-popup__btn btn" title="Отправить форму с заказом">Оформить заказ</button>
+				</form>
 			</ul>
 			<div class="films-preview">
 				<div class="films-preview__full">
@@ -58,8 +87,42 @@
 			<film-description :selected-film="selectedFilm" class="films-description"></film-description>
 		</div>
 	</div>
-
+	
+	
+	
+	
+	
+	
+	<form class="form-popup" id="design" style="display: none;">
+		<div class="form-popup__title">Заявка на дизайн</div>
+		<label class="form-popup__label">
+			Ваше имя:
+			<input class="input form-popup__input" type="text" name="name" placeholder="Роман" required>
+		</label>
+		<label class="form-popup__label">
+			Ваш email:
+			<input class="input form-popup__input" type="email" name="email" placeholder="mail@email.com" required>
+		</label>
+		<label class="form-popup__label">
+			Ваш номер телефона:
+			<input class="input form-popup__input" type="tel" name="tel" placeholder="+7 (000) 000 00 00" required>
+		</label>
+		<label class="form-popup__label">
+			Опишите заказ:
+			<textarea class="input form-popup__input" name="msg" id="" rows="5" placeholder="Дизайн магазина мебели"></textarea>
+		</label>
+		<button type="submit" class="form-popup__btn btn">Отправить заявку</button>
+	</form>
+	
+	
 	<script src="js/vue.js"></script>
+	
+	
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+	
 </body>
 
 </html>

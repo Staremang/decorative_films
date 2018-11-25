@@ -732,8 +732,47 @@ var d = [
       ]
     }
   ];
+Vue.component('modal', {
+	template: `
+		<transition name="modal">
+			<div class="modal-mask">
+				<div class="modal-wrapper">
+					<div class="modal-container">
+						<button @click="$emit('close')" class="fancybox-close-small" title="Close"><svg viewBox="0 0 32 32"><path d="M10,10 L22,22 M22,10 L10,22"></path></svg></button>
+						<slot name="container"></slot>
+					</div>
+				</div>
+			</div>
+		</transition>
+	`
+})
 
-
+Vue.component('film-list-select', {
+	props: {
+		filmList: Array
+	},
+	data: function () {
+		return {
+			filmSelected: [],
+		}
+	},
+	methods: {
+		addItem: function () {
+			
+		}
+	},
+	template: `
+		<div>
+			<select name="" class="form-popup__select">
+				<optgroup v-for="filmType in filmList" :label="filmList.name">
+					<option v-for="filmItem in filmType.sub" :value="filmItem.id">{{ filmItem.name }}</option>
+				</optgroup>
+			</select>
+			<input class="input form-popup__select-input" name="" type="number" placeholder="Размер, м">
+			<button type="button" class="btn form-popup__select-add" title="Добавить наименование">+</button>
+		</div>
+		`
+})
 Vue.component('film-description', {
 	props: {
 		selectedFilm: Object
@@ -862,6 +901,32 @@ Vue.component('list', {
 		</ul>`
 })
 
+Vue.component('sections-item', {
+	props: {
+		sectionsItem: Object
+	},
+//	data: function () {
+//		return {
+//			openKey: 'W'
+//		}
+//	},
+	template: `
+		<section :id="sectionsItem.id">
+			<div class="section__bg" v-for="bg in sectionsItem.backgrounds" :key="bg.id" :style="{backgroundImage: 'url(' + bg.url + ')'}"></div>
+			<div class="container">
+				<div class="section__container">
+					<h1 :class="['section__title', {'section__title_white': sectionsItem.whiteHeader}]">{{sectionsItem.name}}</h1>
+					<ul :class="['section__list', {'section__list_bg': sectionsItem.whiteHeader}]">
+						<li class="section__list-item" v-for="bg in sectionsItem.backgrounds" :key="bg.id">{{bg.name}}</li>
+					</ul>
+					<div class="section__more" v-if="sectionsItem.customBtn" v-html="sectionsItem.customBtn"></div>
+					<div class="section__more" v-else>
+						<button type="button" @click="$emit('open-modal', [sectionsItem.typeId, sectionsItem.filmId])" class="section__more-btn btn">Подробнее...</button>
+					</div>
+				</div>
+			</div>
+		</section>`
+})
 var app = new Vue({
 	el: '#app',
 	data: {
@@ -869,6 +934,134 @@ var app = new Vue({
 		currentFilm: 'W000',
 		selectedFilm: null,
 		type: d,
+		showModal: false,
+		sections: [
+			{
+				name: 'Brilliant Cut',
+				id: 'section-1',
+				typeId: 'W',
+				filmId: 'W000',
+				whiteHeader: true,
+				backgrounds: [
+					{
+						id: 0,
+						url: 'img/s-1_1.jpg',
+						name: 'Максимальный визуальный эффект',
+					}, {
+						id: 1,
+						url: 'img/s-1_2.jpg',
+						name: 'Искрящийся блеск с обеих сторон',
+					}, {
+						id: 2,
+						url: 'img/s-1_3.jpg',
+						name: 'Декоративная непроницаемость',
+					}
+				]
+			}, {
+				name: 'Diamond Grit',
+				id: 'section-2',
+				typeId: 'D',
+				filmId: 'D000',
+				whiteHeader: false,
+				backgrounds: [
+					{
+						id: 0,
+						url: 'img/s-2_1.jpg',
+						name: 'Для необычайно эксклюзивных решений',
+					}, {
+						id: 1,
+						url: 'img/s-2_2.jpg',
+						name: 'Сверкающий эффект в 12 цветовых решениях',
+					}, {
+						id: 2,
+						url: 'img/s-2_3.jpg',
+						name: 'Частичная прозрачность/Полная укрывистость',
+					}
+				]
+			}, {
+				name: 'Crystall & Sandblast',
+				id: 'section-3',
+				typeId: 'CS',
+				filmId: 'F000',
+				whiteHeader: true,
+				backgrounds: [
+					{
+						id: 0,
+						url: 'img/s-3_1.jpg',
+						name: 'Для создания эффектных декоративных узоров',
+					}, {
+						id: 1,
+						url: 'img/s-3_2.jpg',
+						name: 'Sandblast - эффект пескоструйной обработки',
+					}, {
+						id: 2,
+						url: 'img/s-3_3.jpg',
+						name: 'Crystall - с ярко-выраженными блестками',
+					}
+				]
+			}, {
+				name: 'Decorative',
+				id: 'section-4',
+				whiteHeader: false,
+				customBtn: '<a href="Catalog_Decorative.pdf" target="_blank" class="section__more-btn btn">Скачать каталог</a>',
+				backgrounds: [
+					{
+						id: 0,
+						url: 'img/s-4_1.jpg',
+						name: 'Готовые решения для декора интерьеров',
+					}, {
+						id: 1,
+						url: 'img/s-4_2.jpg',
+						name: 'Широкое разнообразие изображений',
+					}, {
+						id: 2,
+						url: 'img/s-4_3.jpg',
+						name: 'Легкое нанесение за счет статики',
+					}
+				]
+			}, {
+				name: 'WoodGrain',
+				id: 'section-5',
+				typeId: 'WG',
+				filmId: 'G402',
+				whiteHeader: true,
+				backgrounds: [
+					{
+						id: 0,
+						url: 'img/s-5_1.jpg',
+						name: 'Ярко выраженная текстура древесины',
+					}, {
+						id: 1,
+						url: 'img/s-5_2.jpg',
+						name: 'Иммитация 5 основных древесных оттенков',
+					}, {
+						id: 2,
+						url: 'img/s-5_3.jpg',
+						name: 'Высокая устойчивость к внешним воздействиям',
+					}
+				]
+			}, {
+				name: 'Design&Creation',
+				id: 'section-6',
+				whiteHeader: false,
+				customBtn: '<a href="#" class="section__more-btn btn">Скачать каталог</a> <button type="button" data-fancybox data-src="#design" class="section__more-btn btn">Задать вопрос</button>',
+				backgrounds: [
+					{
+						id: 0,
+						url: 'img/s-6_1.jpg',
+						name: 'Индивидуальный дизайн',
+					}, {
+						id: 1,
+						url: 'img/s-6_2.jpg',
+						name: 'Подготовка для последующего монтажа',
+					}, {
+						id: 2,
+						url: 'img/s-6_3.jpg',
+						name: 'Интерьерная печать и плоттерная резка пленок',
+					}
+				]
+			}
+		]
 	},
 	methods: {
 		changeFilm: function (id) {
@@ -887,11 +1080,17 @@ var app = new Vue({
 			
 			this.selectedFilm.content = child.content || parent.content;
 			this.selectedFilm.parentName = parent.name;
+		},
+		openModal: function (t, id) {
+			document.body.classList.add('compensate-for-scrollbar');
+			this.currentType = t;
+			this.changeFilm(id);
+			this.showModal = true;
+			
+		},
+		closeModal: function () {
+			this.showModal = false;
+			document.body.classList.remove('compensate-for-scrollbar');
 		}
 	}
 })
-
-
-//Vue.component('film-description', {
-//	
-//})
