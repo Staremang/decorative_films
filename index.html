@@ -18,7 +18,7 @@
 					<a href="#" class="header__link" data-fancybox data-src="#payment_and_shiping" title="">Оплата и Доставка</a>
 					<a href="#" class="header__link">Контакты</a>
 				</nav>
-				<a href="#" class="header__link">+7 (960) 900-10-20</a>
+				<a href="#" class="header__link">+7 (960) 910-50-60</a>
 			</div>
 		</div>
 	</header>
@@ -64,7 +64,12 @@
 				</ul>
 				<div class="films-preview">
 					<div class="films-preview__full">
-						<img src="img/d009-full.png" alt="">
+						<div v-if="selectedFilm.fullUrl" class="films-preview__roll" :style="{backgroundImage: 'url(' + selectedFilm.fullUrl + ')'}">
+							<img src="img/roll-img.png" alt="">
+						</div>
+						<div v-else class="films-preview__roll">
+							<img src="img/roll-img.png" alt="">
+						</div>
 					</div>
 					<nav class="films-preview__colors-container">
 						<div 

@@ -30,30 +30,30 @@ var d = [
 		"sub": [
 			{
 				"id": "W000",
-				"fullUrl": "img/W000-full.jpg",
-				"prevUrl": "img/w000-m.jpg",
-				"galleryPrev": [["img/JPEG/W000.jpg", "img/JPEG/W000_m.jpg"], ["img/JPEG/W000_2.jpg", "img/JPEG/W000_2_m.jpg"], ["img/JPEG/W000_3.jpg", "img/JPEG/W000_3_m.jpg"]],
+				"fullUrl": "img/brilliant-cut/roll-bg/W000.jpg",
+				"prevUrl": "img/brilliant-cut/preview/w000-m.jpg",
+				"galleryPrev": [["img/brilliant-cut/gallery/W000.jpg", "img/brilliant-cut/gallery/W000_m.jpg"], ["img/brilliant-cut/gallery/W000_2.jpg", "img/brilliant-cut/gallery/W000_2_m.jpg"], ["img/brilliant-cut/gallery/W000_3.jpg", "img/brilliant-cut/gallery/W000_3_m.jpg"]],
 				"name": "W000 Silvery"
         },
 			{
 				"id": "W100",
-				"fullUrl": "img/W100-full.jpg",
-				"prevUrl": "img/w100-m.jpg",
-				"galleryPrev": [["img/JPEG/W100.jpg", "img/JPEG/W100_m.jpg"], ["img/JPEG/W100_2.jpg", "img/JPEG/W100_2_m.jpg"], ["img/JPEG/W100_3.jpg", "img/JPEG/W100_3_m.jpg"]],
+				"fullUrl": "img/brilliant-cut/roll-bg/W100.jpg",
+				"prevUrl": "img/brilliant-cut/preview/w100-m.jpg",
+				"galleryPrev": [["img/brilliant-cut/gallery/W100.jpg", "img/brilliant-cut/gallery/W100_m.jpg"], ["img/brilliant-cut/gallery/W100_2.jpg", "img/brilliant-cut/gallery/W100_2_m.jpg"], ["img/brilliant-cut/gallery/W100_3.jpg", "img/brilliant-cut/gallery/W100_3_m.jpg"]],
 				"name": "W100 Golden"
         },
 			{
 				"id": "W200",
-				"fullUrl": "img/W200-full.jpg",
-				"prevUrl": "img/w200-m.jpg",
-				"galleryPrev": [["img/JPEG/W200.jpg", "img/JPEG/W200_m.jpg"], ["img/JPEG/W200_2.jpg", "img/JPEG/W200_2_m.jpg"], ["img/JPEG/W200_3.jpg", "img/JPEG/W200_3_m.jpg"]],
+				"fullUrl": "img/brilliant-cut/roll-bg/W200.jpg",
+				"prevUrl": "img/brilliant-cut/preview/w200-m.jpg",
+				"galleryPrev": [["img/brilliant-cut/gallery/W200.jpg", "img/brilliant-cut/gallery/W200_m.jpg"], ["img/brilliant-cut/gallery/W200_2.jpg", "img/brilliant-cut/gallery/W200_2_m.jpg"], ["img/brilliant-cut/gallery/W200_3.jpg", "img/brilliant-cut/gallery/W200_3_m.jpg"]],
 				"name": "W200 Lilac tint"
         },
 			{
 				"id": "W300",
-				"fullUrl": "img/W300-full.jpg",
-				"prevUrl": "img/w300-m.jpg",
-				"galleryPrev": [["img/JPEG/W300.jpg", "img/JPEG/W300_m.jpg"], ["img/JPEG/W300_2.jpg", "img/JPEG/W300_2_m.jpg"], ["img/JPEG/W300_3.jpg", "img/JPEG/W300_3_m.jpg"]],
+				"fullUrl": "img/brilliant-cut/roll-bg/W300.jpg",
+				"prevUrl": "img/brilliant-cut/preview/w300-m.jpg",
+				"galleryPrev": [["img/brilliant-cut/gallery/W300.jpg", "img/brilliant-cut/gallery/W300_m.jpg"], ["img/brilliant-cut/gallery/W300_2.jpg", "img/brilliant-cut/gallery/W300_2_m.jpg"], ["img/brilliant-cut/gallery/W300_3.jpg", "img/brilliant-cut/gallery/W300_3_m.jpg"]],
 				"name": "W300 Purple"
         }
       ]
@@ -62,33 +62,28 @@ var d = [
 		"name": "Diamond Grit",
 		"category": "D",
 		"content": {
-			"price": [
-          325,
-          795,
-          595,
-          395
-        ],
+			"price": [325, 795, 595, 395],
 			"description": [
 				{
 					"text": "Самок леящаяся виниловая пленка, с ярко- выраженным декоративным эффектом.",
 					"tooltip": "Структурированная лицевая поверхность пленки, в сочетании с металлизированными микро-вкраплениями создает визуальный эффект, отчетливо просматриваемый с обеих сторон материала.<br>Предпочтительнее, для полного использования данного эффекта, используемый материал применять на прозрачных поверхностях.<br><br>Цветовая гамма пленки, за счет частичной прозрачности, с лицевой стороны и со стороны с нанесенным клеем - совпадает. Клеевой слой - прозрачный.<br><br>Рекомендована для сплошного, либо частичного нанесения, только на ровные поверхности."
-          },
+				  },
 				{
 					"text": "Пленка предназначена для дизайнерского оформления интерьеров. Рекомендована для использования на ровных поверхностях.",
 					"tooltip": "Материал применяется при оформление офисных и функциональных перегородок; для дизайна шкафов-купе; при декорировании окон и витражей; в душевых и ванных комнатах, и многих других целей..."
-          }
-        ],
+				  }
+				],
 			"properties": [
 				{
 					"text": "Частично- прозрачная",
 					"iconClass": "icon-lens"
-          },
+				  },
 				{
 					"text": "НЕ рекомендована для плоттерной резки",
 					"iconClass": "icon-plotter",
 					"tooltip": "Пленка не рекомендована для плоттерной резки изображений. Причина - подложка из тонкого PET (полимерный материал толщиной 20мкм).<br><br>!!! Вышеуказанное, не исключает полностью возможность выполнения данной операции.<br>При особой аккуратности и правильно выставленных параметрах резки, выполнить данный процесс - реально. Существует некоторый риск получения брака... но это вполне решается тестовыми пробами."
-          }
-        ],
+				  }
+				],
 			"proportions": {
 				"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя, постоянной фиксации.<br><br>Подложка - PET (полиэтилентерефталат, 20мкм.) <br><br>Срок эксплуатации: от 3 лет (вну три помещений)"
 			}
@@ -96,189 +91,87 @@ var d = [
 		"sub": [
 			{
 				"id": "D000",
-				"fullUrl": "img/D000-full.jpg",
-				"prevUrl": "img/D000-m.jpg",
-				"galleryPrev": [
-					["img/JPEG/D000.jpg", "img/JPEG/D000_m.jpg"],
-					["img/JPEG/D000_2.jpg", "img/JPEG/D000_2_m.jpg"]
-				],
+				"fullUrl": "img/diamond-grit/roll-bg/D000.jpg",
+				"prevUrl": "img/diamond-grit/preview/D000-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D000.jpg", "img/diamond-grit/gallery/D000_m.jpg"],["img/diamond-grit/gallery/D000_2.jpg", "img/diamond-grit/gallery/D000_2_m.jpg"]],
 				"name": "D000 Colorless"
-        },
+			},
 			{
 				"id": "D001",
-				"fullUrl": "img/D001-full.jpg",
-				"prevUrl": "img/D001-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D001.jpg",
-              "img/JPEG/D001_m.jpg"
-            ],
-            [
-              "img/JPEG/D001_2.jpg",
-              "img/JPEG/D001_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D001.jpg",
+				"prevUrl": "img/diamond-grit/preview/D001-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D001.jpg","img/diamond-grit/gallery/D001_m.jpg"],["img/diamond-grit/gallery/D001_2.jpg","img/diamond-grit/gallery/D001_2_m.jpg"]],
 				"name": "D001 Cherry red"
-        },
+			},
 			{
 				"id": "D002",
-				"fullUrl": "img/D002-full.jpg",
-				"prevUrl": "img/D002-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D002.jpg",
-              "img/JPEG/D002_m.jpg"
-            ],
-            [
-              "img/JPEG/D002_2.jpg",
-              "img/JPEG/D002_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D002.jpg",
+				"prevUrl": "img/diamond-grit/preview/D002-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D002.jpg","img/diamond-grit/gallery/D002_m.jpg"],["img/diamond-grit/gallery/D002_2.jpg","img/diamond-grit/gallery/D002_2_m.jpg"]],
 				"name": "D002 Azure sea"
-        },
+			}, 
 			{
 				"id": "D003",
-				"fullUrl": "img/D003-full.jpg",
-				"prevUrl": "img/D003-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D003.jpg",
-              "img/JPEG/D003_m.jpg"
-            ],
-            [
-              "img/JPEG/D003_2.jpg",
-              "img/JPEG/D003_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D003.jpg",
+				"prevUrl": "img/diamond-grit/preview/D003-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D003.jpg","img/diamond-grit/gallery/D003_m.jpg"],["img/diamond-grit/gallery/D003_2.jpg","img/diamond-grit/gallery/D003_2_m.jpg"]],
 				"name": "D003 Light green"
-        },
+			},
 			{
 				"id": "D004",
-				"fullUrl": "img/D004-full.jpg",
-				"prevUrl": "img/D004-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D004.jpg",
-              "img/JPEG/D004_m.jpg"
-            ],
-            [
-              "img/JPEG/D004_2.jpg",
-              "img/JPEG/D004_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D004.jpg",
+				"prevUrl": "img/diamond-grit/preview/D004-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D004.jpg","img/diamond-grit/gallery/D004_m.jpg"],["img/diamond-grit/gallery/D004_2.jpg","img/diamond-grit/gallery/D004_2_m.jpg"]],
 				"name": "D004 Lilac tint"
-        },
+			},
 			{
 				"id": "D005",
-				"fullUrl": "img/D005-full.jpg",
-				"prevUrl": "img/D005-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D005.jpg",
-              "img/JPEG/D005_m.jpg"
-            ],
-            [
-              "img/JPEG/D005_2.jpg",
-              "img/JPEG/D005_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D005.jpg",
+				"prevUrl": "img/diamond-grit/preview/D005-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D005.jpg","img/diamond-grit/gallery/D005_m.jpg"],["img/diamond-grit/gallery/D005_2.jpg","img/diamond-grit/gallery/D005_2_m.jpg"]],
 				"name": "D005 Poison rose"
-        },
+			},
 			{
 				"id": "D006",
-				"fullUrl": "img/D006-full.jpg",
-				"prevUrl": "img/D006-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D006.jpg",
-              "img/JPEG/D006_m.jpg"
-            ],
-            [
-              "img/JPEG/D006_2.jpg",
-              "img/JPEG/D006_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D006.jpg",
+				"prevUrl": "img/diamond-grit/preview/D006-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D006.jpg","img/diamond-grit/gallery/D006_m.jpg"],["img/diamond-grit/gallery/D006_2.jpg","img/diamond-grit/gallery/D006_2_m.jpg"]],
 				"name": "D006 Smoky black"
         },
 			{
 				"id": "D007",
-				"fullUrl": "img/D007-full.jpg",
-				"prevUrl": "img/D007-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D007.jpg",
-              "img/JPEG/D007_m.jpg"
-            ],
-            [
-              "img/JPEG/D007_2.jpg",
-              "img/JPEG/D007_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D007.jpg",
+				"prevUrl": "img/diamond-grit/preview/D007-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D007.jpg","img/diamond-grit/gallery/D007_m.jpg"],["img/diamond-grit/gallery/D007_2.jpg","img/diamond-grit/gallery/D007_2_m.jpg"]],
 				"name": "D007 Golden orange"
         },
 			{
 				"id": "D008",
-				"fullUrl": "img/D008-full.jpg",
-				"prevUrl": "img/D008-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D008.jpg",
-              "img/JPEG/D008_m.jpg"
-            ],
-            [
-              "img/JPEG/D008_2.jpg",
-              "img/JPEG/D008_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D008.jpg",
+				"prevUrl": "img/diamond-grit/preview/D008-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D008.jpg","img/diamond-grit/gallery/D008_m.jpg"],["img/diamond-grit/gallery/D008_2.jpg","img/diamond-grit/gallery/D008_2_m.jpg"]],
 				"name": "D008 Blue sky"
         },
 			{
 				"id": "D009",
-				"fullUrl": "img/D009-full.jpg",
-				"prevUrl": "img/D009-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D009.jpg",
-              "img/JPEG/D009_m.jpg"
-            ],
-            [
-              "img/JPEG/D009_2.jpg",
-              "img/JPEG/D009_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D009.jpg",
+				"prevUrl": "img/diamond-grit/preview/D009-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D009.jpg","img/diamond-grit/gallery/D009_m.jpg"],["img/diamond-grit/gallery/D009_2.jpg","img/diamond-grit/gallery/D009_2_m.jpg"]],
 				"name": "D009 Black"
         },
 			{
 				"id": "D010",
 				"fullUrl": "img/D010-full.jpg",
-				"prevUrl": "img/D010-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D010.jpg",
-              "img/JPEG/D010_m.jpg"
-            ],
-            [
-              "img/JPEG/D010_2.jpg",
-              "img/JPEG/D010_2_m.jpg"
-            ]
-          ],
+				"prevUrl": "img/diamond-grit/preview/D010-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D010.jpg","img/diamond-grit/gallery/D010_m.jpg"],["img/diamond-grit/gallery/D010_2.jpg","img/diamond-grit/gallery/D010_2_m.jpg"]],
 				"name": "D010 Caustic yellow",
 				"description": ""
         },
 			{
 				"id": "D011",
-				"fullUrl": "img/D011-full.jpg",
-				"prevUrl": "img/D011-m.jpg",
-				"galleryPrev": [
-            [
-              "img/JPEG/D011.jpg",
-              "img/JPEG/D011_m.jpg"
-            ],
-            [
-              "img/JPEG/D011_2.jpg",
-              "img/JPEG/D011_2_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/diamond-grit/roll-bg/D011.jpg",
+				"prevUrl": "img/diamond-grit/preview/D011-m.jpg",
+				"galleryPrev": [["img/diamond-grit/gallery/D011.jpg","img/diamond-grit/gallery/D011_m.jpg"],["img/diamond-grit/gallery/D011_2.jpg","img/diamond-grit/gallery/D011_2_m.jpg"]],
 				"name": "D011 Light lemon",
 				"description": ""
         }
@@ -290,340 +183,234 @@ var d = [
 		"sub": [
 			{
 				"id": "F000",
-				"fullUrl": "img/F000-full.jpg",
-				"prevUrl": "img/F000-m.jpg",
-				"galleryPrev": [
-					["img/sandblast/F000_1.jpg", "img/sandblast/F000_1_m.jpg"],
-					["img/sandblast/F000_2.jpg", "img/sandblast/F000_2_m.jpg"],
-					["img/sandblast/F000_3.jpg", "img/sandblast/F000_3_m.jpg"]
-				],
 				"name": "F000  SilveryGrey",
+//				"fullUrl": "img/F000-full.jpg",
+				"prevUrl": "img/sandblast/preview/F000-m.jpg",
+				"galleryPrev": [
+					["img/sandblast/gallery/F000_1.jpg", "img/sandblast/gallery/F000_1_m.jpg"],
+					["img/sandblast/gallery/F000_2.jpg", "img/sandblast/gallery/F000_2_m.jpg"],
+					["img/sandblast/gallery/F000_3.jpg", "img/sandblast/gallery/F000_3_m.jpg"]
+				],
 				"content": {
 					"price": [240, 595, 445, 295],
 					"description": [
-						{
-							"text": "Декоративная самоклеящаяся виниловая пленка с эффектом пескоструйной обработки стекла."
-              },
-						{
-							"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."
-              }
-            ],
+						{"text": "Декоративная самоклеящаяся виниловая пленка с эффектом пескоструйной обработки стекла."},
+						{"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."}
+					],
 					"properties": [
 						{
-							"text": "Серебро сверкающее <span>/ Яркий эффект с обеих сторон</span>",
-							"iconClass": ""
-              },
-						{
+							"text": "Серебро сверкающее",
+							"iconClass": "icon-color"
+						}, {
 							"text": "Частично - прозрачная",
 							"iconClass": "icon-lens"
-              },
-						{
+						}, {
 							"text": "Предназначена для плоттерной резки <br>Рекомендована для экосольвентной печати",
 							"iconClass": "icon-plotter-3"
-              }
-            ],
+						}
+					],
 					"proportions": {
 						"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя. Клей постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (120g) <br><br>Срок эксплуатации: свыше 3 лет (внутри помещений), до 2 лет (наружной эксплуатации)"
 					}
 				}
-        },
+			}, 
 			{
 				"id": "F100",
-				"fullUrl": "img/F100-full.jpg",
-				"prevUrl": "img/F100-m.jpg",
-				"galleryPrev": [
-            [
-              "img/sandblast/F100_1.jpg",
-              "img/sandblast/F100_1_m.jpg"
-            ],
-            [
-              "img/sandblast/F100_2.jpg",
-              "img/sandblast/F100_2_m.jpg"
-            ],
-            [
-              "img/sandblast/F100_3.jpg",
-              "img/sandblast/F100_3_m.jpg"
-            ]
-          ],
 				"name": "F100  Crystall Frost",
+//				"fullUrl": "img/F100-full.jpg",
+				"prevUrl": "img/sandblast/preview/F100-m.jpg",
+				"galleryPrev": [
+					["img/sandblast/gallery/F100_1.jpg", "img/sandblast/gallery/F100_1_m.jpg"],
+					["img/sandblast/gallery/F100_2.jpg", "img/sandblast/gallery/F100_2_m.jpg"],
+					["img/sandblast/gallery/F100_3.jpg", "img/sandblast/gallery/F100_3_m.jpg"]
+				],
 				"content": {
-					"price": [
-              240,
-              595,
-              445,
-              295
-            ],
+					"price": [240, 595, 445, 295],
 					"description": [
-						{
-							"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."
-              },
-						{
-							"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."
-              }
-            ],
+						{"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."},
+						{"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."}
+					],
 					"properties": [
 						{
 							"text": "Серебро с алмазной пылью <span>( White 10%)</span>",
-							"iconClass": ""
-              },
-						{
+							"iconClass": "icon-color"
+						}, {
 							"text": "Частично - прозрачная",
 							"iconClass": "icon-lens"
-              },
-						{
+						}, {
 							"text": "Предназначена для плоттерной резки <br>Рекомендована для экосольвентной печати",
 							"iconClass": "icon-plotter-3"
-              }
-            ],
+						}
+					],
 					"proportions": {
 						"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя. Клей постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (120g) <br><br>Срок эксплуатации: свыше 3 лет (внутри помещений), до 2 лет (наружной эксплуатации)"
 					}
 				}
-        },
+			},
 			{
 				"id": "F300",
-				"fullUrl": "img/F300-full.jpg",
-				"prevUrl": "img/F300-m.jpg",
+//				"fullUrl": "img/F300-full.jpg",
+				"prevUrl": "img/sandblast/preview/F300-m.jpg",
 				"galleryPrev": [
-            [
-              "img/sandblast/F300_1.jpg",
-              "img/sandblast/F300_1_m.jpg"
-            ],
-            [
-              "img/sandblast/F300_2.jpg",
-              "img/sandblast/F300_2_m.jpg"
-            ],
-            [
-              "img/sandblast/F300_3.jpg",
-              "img/sandblast/F300_3_m.jpg"
-            ]
-          ],
+					["img/sandblast/gallery/F300_1.jpg", "img/sandblast/gallery/F300_1_m.jpg"],
+					["img/sandblast/gallery/F300_2.jpg", "img/sandblast/gallery/F300_2_m.jpg"],
+					["img/sandblast/gallery/F300_3.jpg", "img/sandblast/gallery/F300_3_m.jpg"]
+				],
 				"name": "F300  Crystall White",
 				"content": {
-					"price": [
-              240,
-              595,
-              445,
-              295
-            ],
+					"price": [240, 595, 445, 295],
 					"description": [
-						{
-							"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."
-              },
-						{
-							"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."
-              }
-            ],
+						{"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."},
+						{"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."}
+					],
 					"properties": [
 						{
 							"text": "Серебро с алмазной пылью <span>( White 30%)</span>",
-							"iconClass": ""
-              },
+							"iconClass": "icon-color"
+						},
 						{
 							"text": "Частично - прозрачная",
 							"iconClass": "icon-lens"
-              },
+						},
 						{
 							"text": "Предназначена для плоттерной резки <br>Рекомендована для экосольвентной печати",
 							"iconClass": "icon-plotter-3"
-              }
-            ],
+						}
+					],
 					"proportions": {
 						"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя. Клей постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (120g) <br><br>Срок эксплуатации: свыше 3 лет (внутри помещений), до 2 лет (наружной эксплуатации)"
 					}
 				}
-        },
+			},
 			{
 				"id": "G050",
-				"fullUrl": "img/G050-full.jpg",
-				"prevUrl": "img/G050-m.jpg",
+//				"fullUrl": "img/G050-full.jpg",
+				"prevUrl": "img/sandblast/preview/G050-m.jpg",
 				"galleryPrev": [
-            [
-              "img/sandblast/G050_1.jpg",
-              "img/sandblast/G050_1_m.jpg"
-            ],
-            [
-              "img/sandblast/G050_2.jpg",
-              "img/sandblast/G050_2_m.jpg"
-            ],
-            [
-              "img/sandblast/G050_3.jpg",
-              "img/sandblast/G050_3_m.jpg"
-            ]
-          ],
+					["img/sandblast/gallery/G050_1.jpg", "img/sandblast/gallery/G050_1_m.jpg"],
+					["img/sandblast/gallery/G050_2.jpg", "img/sandblast/gallery/G050_2_m.jpg"],
+					["img/sandblast/gallery/G050_3.jpg", "img/sandblast/gallery/G050_3_m.jpg"]
+				],
 				"name": "G050  Grey Metallic",
 				"content": {
-					"price": [
-              160,
-              395,
-              295,
-              195
-            ],
+					"price": [160, 395, 295, 195 ],
 					"description": [
-						{
-							"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."
-              },
-						{
-							"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."
-              }
-            ],
+						{"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."},
+						{"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."}
+					],
 					"properties": [
 						{
 							"text": "Металлик серебристо-серый <span>(Gray 10%)</span>",
-							"iconClass": ""
-              },
+							"iconClass": "icon-color"
+						},
 						{
 							"text": "Частично - прозрачная",
 							"iconClass": "icon-lens"
-              },
+						},
 						{
 							"text": "Предназначена для плоттерной резки <br>Рекомендована для экосольвентной печати",
 							"iconClass": "icon-plotter-3"
-              }
-            ],
+						}
+					],
 					"proportions": {
 						"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя. Клей постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (120g) <br><br>Срок эксплуатации: свыше 3 лет (внутри помещений), до 2 лет (наружной эксплуатации)"
 					}
 				}
-        },
+			},
 			{
 				"id": "M000",
-				"fullUrl": "img/M000-full.jpg",
-				"prevUrl": "img/M000-m.jpg",
-				"galleryPrev": [
-            [
-              "img/sandblast/M000_1.jpg",
-              "img/sandblast/M000_1_m.jpg"
-            ],
-            [
-              "img/sandblast/M000_2.jpg",
-              "img/sandblast/M000_2_m.jpg"
-            ],
-            [
-              "img/sandblast/M000_3.jpg",
-              "img/sandblast/M000_3_m.jpg"
-            ]
-          ],
+//				"fullUrl": "img/M000-full.jpg",
+				"prevUrl": "img/sandblast/preview/M000-m.jpg",
+				"galleryPrev": [["img/sandblast/gallery/M000_1.jpg","img/sandblast/gallery/M000_1_m.jpg"],["img/sandblast/gallery/M000_2.jpg","img/sandblast/gallery/M000_2_m.jpg"],["img/sandblast/gallery/M000_3.jpg","img/sandblast/gallery/M000_3_m.jpg"]],
 				"name": "M000  Frosted Sand",
 				"content": {
-					"price": [
-              160,
-              395,
-              295,
-              195
-            ],
+					"price": [160,395,295,195],
 					"description": [
-						{
-							"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."
-              },
-						{
-							"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."
-              }
-            ],
+						{"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."},
+						{"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."}
+					],
 					"properties": [
 						{
 							"text": "Эффект морозного инея <span>(White 10%)</span>",
-							"iconClass": ""
-              },
+							"iconClass": "icon-color"
+						},
 						{
 							"text": "Частично - прозрачная",
 							"iconClass": "icon-lens"
-              },
+						},
 						{
 							"text": "Предназначена для плоттерной резки <br>Рекомендована для экосольвентной печати",
 							"iconClass": "icon-plotter-3"
-              }
-            ],
+						}
+					],
 					"proportions": {
 						"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя. Клей постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (120g) <br><br>Срок эксплуатации: свыше 3 лет (внутри помещений), до 2 лет (наружной эксплуатации)"
 					}
 				}
-        },
+			},
 			{
 				"id": "M100",
-				"fullUrl": "img/M100-full.jpg",
-				"prevUrl": "img/M100-m.jpg",
-				"galleryPrev": [
-            [
-              "img/sandblast/M100_1.jpg",
-              "img/sandblast/M100_1_m.jpg"
-            ],
-            [
-              "img/sandblast/M100_2.jpg",
-              "img/sandblast/M100_2_m.jpg"
-            ],
-            [
-              "img/sandblast/M100_3.jpg",
-              "img/sandblast/M100_3_m.jpg"
-            ]
-          ],
+//				"fullUrl": "img/M100-full.jpg",
+				"prevUrl": "img/sandblast/preview/M100-m.jpg",
+				"galleryPrev": [["img/sandblast/gallery/M100_1.jpg","img/sandblast/gallery/M100_1_m.jpg"],["img/sandblast/gallery/M100_2.jpg","img/sandblast/gallery/M100_2_m.jpg"],["img/sandblast/gallery/M100_3.jpg","img/sandblast/gallery/M100_3_m.jpg"]],
 				"name": "M100  Frosted White",
 				"content": {
 					"price": [
-              160,
-              395,
-              295,
-              195
-            ],
+						160,
+						395,
+						295,
+						195
+					],
 					"description": [
-						{
-							"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."
-              },
-						{
-							"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."
-              }
-            ],
+						{"text": "Декоративная самок леящаяся виниловая пленка с эффектом пескоструйной обработки стекла."},
+						{"text": "Пленка предназначена, как для функционального, так и для дизайнерского оформления, в интерьерах и экстерьерах. Применяется на непрозрачных и прозрачных поверхностях, в т.ч. изображений вырезанных на плоттере."}
+					],
 					"properties": [
 						{
 							"text": "Эффект морозного инея <span>(White 40%)</span>",
-							"iconClass": ""
-              },
+							"iconClass": "icon-color"
+						},
 						{
 							"text": "Частично - прозрачная",
 							"iconClass": "icon-lens"
-              },
+						},
 						{
 							"text": "Предназначена для плоттерной резки <br>Рекомендована для экосольвентной печати",
 							"iconClass": "icon-plotter-3"
-              }
-            ],
+						}
+					],
 					"proportions": {
 						"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя. Клей постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (120g) <br><br>Срок эксплуатации: свыше 3 лет (внутри помещений), до 2 лет (наружной эксплуатации)"
 					}
 				}
-        }
-      ]
-    },
+			}
+		]
+	},
 	{
 		"name": "WoodGrain",
 		"category": "WG",
 		"content": {
-			"price": [
-          240,
-          595,
-          445,
-          295
-        ],
+			"price": [240,595,445,295],
 			"description": [
 				{
 					"text": "Самок леящаяся виниловая пленка, имитирующая древесный узор, с глубокой 3D текстурой, синхронизированной с печатным узором.",
 					"tooltip": "Реалистичность внешнего вида, достигается глубоким 3D тиснением, имитирующим структуру натуральной древесины, в сочетании с печатным узором, синхронизированным c тисненым рельефом.<br><br>Пленка - полностью НЕ прозрачна!<br><br>Декоративной является только лицевая поверхность. Обратная сторона имеет однотонный оттенок.<br><br>Рекомендуется для использования только на ровных, и желательно непрозрачных поверхностях."
-          },
+				},
 				{
 					"text": "Пленка предназначена для дизайнерского оформления интерьеров. Применяется для сплошного, либо частичного нанесения на ровные поверхности.",
 					"tooltip": "Материал применяется при реставрировании мебели, для дизайна шкафов-купе, изготовлении функциональных перегородок и иных аналогичных целей..."
-          }
-        ],
+				}
+			],
 			"properties": [
 				{
 					"text": "Полностью НЕ прозрачная. <br>Обратная сторона - однотонная.",
 					"iconClass": "icon-lens"
-          },
+				},
 				{
 					"text": "НЕ предназначена для плоттерной резки.",
 					"iconClass": "icon-plotter"
-          }
-        ],
+				}
+			],
 			"proportions": {
 				"tooltip": "Пленка поставляется с полиакрилатным клеевым слоем на основе растворителя, постоянной фиксации. <br><br>Подложка - Силиконизированная бумага (100g/m<sup>2</sup>) <br><br>Срок службы: свыше 2 лет (внутри помещений)"
 			}
@@ -631,102 +418,37 @@ var d = [
 		"sub": [
 			{
 				"id": "G402",
-				"fullUrl": "img/G402-full.jpg",
-				"prevUrl": "img/G402-m.jpg",
-				"galleryPrev": [
-            [
-              "img/woodgrain/G402_1.jpg",
-              "img/woodgrain/G402_1_m.jpg"
-            ],
-            [
-              "img/woodgrain/G402_2.jpg",
-              "img/woodgrain/G402_2_m.jpg"
-            ],
-            [
-              "img/woodgrain/G402_3.jpg",
-              "img/woodgrain/G402_3_m.jpg"
-            ]
-          ],
+				"fullUrl": "img/woodgrain/roll-bg/G402.jpg",
+				"prevUrl": "img/woodgrain/preview/G402-m.jpg",
+				"galleryPrev": [["img/woodgrain/gallery/G402_1.jpg","img/woodgrain/gallery/G402_1_m.jpg"],["img/woodgrain/gallery/G402_2.jpg","img/woodgrain/gallery/G402_2_m.jpg"],["img/woodgrain/gallery/G402_3.jpg","img/woodgrain/gallery/G402_3_m.jpg"]],
 				"name": "G402 RoseWood"
-        },
+			},
 			{
 				"id": "G403",
-				"fullUrl": "img/G403-full.jpg",
-				"prevUrl": "img/G403-m.jpg",
-				"galleryPrev": [
-            [
-              "img/woodgrain/G403_1.jpg",
-              "img/woodgrain/G403_1_m.jpg"
-            ],
-            [
-              "img/woodgrain/G403_2.jpg",
-              "img/woodgrain/G403_2_m.jpg"
-            ],
-            [
-              "img/woodgrain/G403_3.jpg",
-              "img/woodgrain/G403_3_m.jpg"
-            ]
-          ],
+//				"fullUrl": "img/woodgrain/roll-bg/G403-full.jpg",
+				"prevUrl": "img/woodgrain/preview/G403-m.jpg",
+				"galleryPrev": [["img/woodgrain/gallery/G403_1.jpg","img/woodgrain/gallery/G403_1_m.jpg"],["img/woodgrain/gallery/G403_2.jpg","img/woodgrain/gallery/G403_2_m.jpg"],["img/woodgrain/gallery/G403_3.jpg","img/woodgrain/gallery/G403_3_m.jpg"]],
 				"name": "G403 Red Sandal"
         },
 			{
 				"id": "G404",
-				"fullUrl": "img/G404-full.jpg",
-				"prevUrl": "img/G404-m.jpg",
-				"galleryPrev": [
-            [
-              "img/woodgrain/G404_1.jpg",
-              "img/woodgrain/G404_1_m.jpg"
-            ],
-            [
-              "img/woodgrain/G404_2.jpg",
-              "img/woodgrain/G404_2_m.jpg"
-            ],
-            [
-              "img/woodgrain/G404_3.jpg",
-              "img/woodgrain/G404_3_m.jpg"
-            ]
-          ],
+//				"fullUrl": "img/woodgrain/roll-bg/G404-full.jpg",
+				"prevUrl": "img/woodgrain/preview/G404-m.jpg",
+				"galleryPrev": [["img/woodgrain/gallery/G404_1.jpg","img/woodgrain/gallery/G404_1_m.jpg"],["img/woodgrain/gallery/G404_2.jpg","img/woodgrain/gallery/G404_2_m.jpg"],["img/woodgrain/gallery/G404_3.jpg","img/woodgrain/gallery/G404_3_m.jpg"]],
 				"name": "G404 Black Wood"
         },
 			{
 				"id": "G405",
-				"fullUrl": "img/G405-full.jpg",
-				"prevUrl": "img/G405-m.jpg",
-				"galleryPrev": [
-            [
-              "img/woodgrain/G405_1.jpg",
-              "img/woodgrain/G405_1_m.jpg"
-            ],
-            [
-              "img/woodgrain/G405_2.jpg",
-              "img/woodgrain/G405_2_m.jpg"
-            ],
-            [
-              "img/woodgrain/G405_3.jpg",
-              "img/woodgrain/G405_3_m.jpg"
-            ]
-          ],
+//				"fullUrl": "img/woodgrain/roll-bg/G405-full.jpg",
+				"prevUrl": "img/woodgrain/preview/G405-m.jpg",
+				"galleryPrev": [["img/woodgrain/gallery/G405_1.jpg","img/woodgrain/gallery/G405_1_m.jpg"],["img/woodgrain/gallery/G405_2.jpg","img/woodgrain/gallery/G405_2_m.jpg"],["img/woodgrain/gallery/G405_3.jpg","img/woodgrain/gallery/G405_3_m.jpg"]],
 				"name": "G405 Silver Wood"
         },
 			{
 				"id": "G406",
-				"fullUrl": "img/G406-full.jpg",
-				"prevUrl": "img/G406-m.jpg",
-				"galleryPrev": [
-            [
-              "img/woodgrain/G406_1.jpg",
-              "img/woodgrain/G406_1_m.jpg"
-            ],
-            [
-              "img/woodgrain/G406_2.jpg",
-              "img/woodgrain/G406_2_m.jpg"
-            ],
-            [
-              "img/woodgrain/G406_3.jpg",
-              "img/woodgrain/G406_3_m.jpg"
-            ]
-          ],
+//				"fullUrl": "img/woodgrain/roll-bg/G406-full.jpg",
+				"prevUrl": "img/woodgrain/preview/G406-m.jpg",
+				"galleryPrev": [["img/woodgrain/gallery/G406_1.jpg","img/woodgrain/gallery/G406_1_m.jpg"],["img/woodgrain/gallery/G406_2.jpg","img/woodgrain/gallery/G406_2_m.jpg"],["img/woodgrain/gallery/G406_3.jpg","img/woodgrain/gallery/G406_3_m.jpg"]],
 				"name": "G406 Gold Wood"
         }
       ]
