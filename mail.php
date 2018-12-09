@@ -45,7 +45,7 @@ function getBody ($title, $body) {
 
 if( isset($_POST['form-type']) ) {
 //    $to       = ""; //Почта получателя
-	$to       = "stadia-reklama@yandex.ru, zakaz@stadia-nk.ru, staremang@ya.ru"; //Почта получателя (developer)
+	$to       = "stadia2002@mail.ru, staremang@ya.ru"; //Почта получателя (developer)
     $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
     $headers .= "From: Декоративные пленки <mail@staida-nk.ru>\r\n"; //Наименование и почта отправителя
 

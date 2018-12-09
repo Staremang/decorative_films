@@ -1,13 +1,15 @@
-body {
-	background: url(../img/signage-bg.jpg) no-repeat;
+.s-section {
+	min-height: 100vh;
+	background: url(../img/signage-bg.jpg) center no-repeat;
 	background-size: cover;
+	overflow: hidden;
 }
 
 .s-header {
 	background: url(../img/signage-header-bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: center;
-	margin-top: 20vh;
+	margin-top: 93/810 * 100vh;
 	
 	&__container {
 		display: flex;
@@ -18,50 +20,32 @@ body {
 //	width: 648px;
 	color: #201600;
 	
-	height: 107px;
+	height: 90px;
 	padding-top: 10px;
+	padding-left: 225/1440vw * 100;
 	
-	@media (min-width: 1280px) {
-		height: 120px;
-	}
-	@media (min-width: 1440px) {
-		height: 140px;
-		padding-top: 20px;
-	}
-	@media (min-width: 1680px) {
-		height: 160px;
+	@media (min-width: @width-1366) {
+		height: 105px;
 	}
 }
 
 .s-header__title {
-	font-size: 57px;
+	font-size: 46px;
 	font-weight: 400;
 	margin: 0;
 	line-height: 1;
 	
-	@media (min-width: 1280px) {
-		font-size: 64px;
-	}
-	@media (min-width: 1440px) {
-		font-size: 75px;
-	}
-	@media (min-width: 1680px) {
-		font-size: 85px;
+	@media (min-width: @width-1366) {
+		font-size: 56px;
 	}
 }
 
 .s-header__subtitle {
 	text-align: right;
-	font-size: 17px;
+	font-size: 14px;
 	margin: 10px 0 0;
 	
-	@media (min-width: 1280px) {
-		font-size: 19px;
-	}
-	@media (min-width: 1440px) {
-		font-size: 22px;
-	}
-	@media (min-width: 1680px) {
-		font-size: 25px;
+	@media (min-width: @width-1366) {
+		font-size: 18px;
 	}
 }
